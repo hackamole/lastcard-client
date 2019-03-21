@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Takeover = styled.section`
@@ -18,13 +18,13 @@ const Takeover = styled.section`
   }
 `
 
-const expand = () => {
+const toggleLogin = () => {
   console.log('test');
 }
 
 export default () => (
   <Takeover>
-    <button onClick={() => expand()}>
+    <button onClick={() => toggleLogin()}>
       take over this card
     </button>
   </Takeover>
