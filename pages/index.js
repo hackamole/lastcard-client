@@ -3,5 +3,8 @@ import Link from 'next/link'
 // import styled from 'styled-components'
 
 export default () => (
-  <Link href='/card' as='/card'><a>card page</a></Link>
+  <div>
+    <Link href='/card' as='/card'><a>card page</a></Link>
+    <Link href='/profile' as='/profile'><a>profile page</a></Link>
+  </div>
 )

@@ -54,6 +54,7 @@ const TakeoverWrapper = styled.section`
         color: white;
         font-size: 1.2rem;
         margin-bottom: 1rem;
+        
         span {
           margin-left: .4rem;
         }
@@ -72,7 +73,7 @@ export default class Takeover extends React.Component {
   }
 
   state = {
-    isExpanded: true,
+    isExpanded: false,
   }
 
   togglePanel = () => {
