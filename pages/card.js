@@ -6,7 +6,7 @@ import Takeover from '../components/takeover'
 
 const user = {
   name: 'João Silva',
-  title: 'Project Manager @ GoodCompany',
+  title: 'Project Manager',
   company: 'Good Company',
   contacts: {
     phone: '+351 912 345 678',

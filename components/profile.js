@@ -10,11 +10,21 @@ const Profile = styled.section`
   padding: 4rem 2rem;
   text-align: center;
   
-  > p {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: .875rem;
+  h1.name {
+    margin-bottom: .25rem;
+  }
+  
+  h2.title {
+    margin-bottom: 1.5rem;
+  }
+  
+  > p.contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: .875rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
   
     > span {
       margin: .25rem;
@@ -40,9 +50,9 @@ export default ({user}) => (
     <div>
       <img src="/static/images/profile_m.png" alt="profile avatar"/>
     </div>
-    <h1>{user.name}</h1>
-    <h2>{user.title} @ {user.company}</h2>
-    <p>
+    <h1 className="name">{user.name}</h1>
+    <h2 className="title">{user.title} @ {user.company}</h2>
+    <p className="contacts">
       <span>{user.contacts.email}</span>
       <span>{user.contacts.phone}</span>
     </p>
