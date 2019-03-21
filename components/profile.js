@@ -2,15 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Profile = styled.section`
-  height: 100%;
-  width: 100%;
+  height: calc(100% - 128px);
+  width: calc(100% - 128px);
   display: flex;
   flex-direction: column;
+  padding: 64px;
+  text-align: center;
 `
 
 export default () => (
   <Profile>
-    <div>Avatar</div>
+    <div>
+      <img src="" alt=""/>
+    </div>
     <h1>Name</h1>
     <h3>title</h3>
     <p>
