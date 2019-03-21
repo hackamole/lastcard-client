@@ -21,13 +21,21 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html css={`
+          width: 100%;
+          height: 100%;
+          color: white;
+        `}>
         <Head>
           <title>Last Card</title>
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>
-        <body>
+        <body css={`
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(65.21deg, rgba(48, 35, 174, 0.5) 0%, rgba(200, 109, 215, 0.5) 100%);
+        `}>
           <Main />
           <NextScript />
         </body>
