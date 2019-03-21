@@ -30,17 +30,18 @@ const Profile = styled.section`
       margin: .25rem;
     }
   }
-`
-
-const List = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  a {
-    color: white;
-    text-decoration: none;
-    span {
-      font-size: 3rem;
+  
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    a {
+      color: white;
+      text-decoration: none;
+      span {
+        font-size: 3rem;
+      }
     }
   }
 `
@@ -57,24 +58,11 @@ export default ({user}) => (
       <span>{user.contacts.phone}</span>
     </p>
     <section>
-      <h5>add to:</h5>
-      <List>
-        <li>
-          <a href={user.links.linkedin}>
-            <span className="icon-linkedin"></span>
-          </a>
-        </li>
-        <li>
-          <a href={user.links.github}>
-            <span className="icon-github"></span>
-          </a>
-        </li>
-        <li>
-          <a href={user.links.vcard}>
-            <span className="icon-profile"></span>
-          </a>
-        </li>
-      </List>
+      <ul>
+        <li><a href={user.links.linkedin}><span className="icon-linkedin"></span></a></li>
+        <li><a href={user.links.github}><span className="icon-github"></span></a></li>
+        <li><a href={user.links.vcard}><span className="icon-profile"></span></a></li>
+      </ul>
     </section>
   </Profile>
 )

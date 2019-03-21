@@ -159,6 +159,7 @@ const Html = styled.html`
   height: 100%;
   color: white;
   font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   
   body {
     width: 100%;
@@ -176,11 +177,21 @@ const Html = styled.html`
   h1 {
     font-size: 3rem;
     font-weight: 600;
+    line-height: 58px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
     font-size: 1rem;
     font-weight: 500;
+    line-height: 19px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 16px;
   }
 `
 

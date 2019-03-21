@@ -9,10 +9,23 @@ const Takeover = styled.section`
   justify-content: center;
   align-items: center;
   color: #797979;
+  
+  button {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 `
+
+const expand = () => {
+  console.log('test');
+}
 
 export default () => (
   <Takeover>
-    take over this card
+    <button onClick={() => expand()}>
+      take over this card
+    </button>
   </Takeover>
 )
