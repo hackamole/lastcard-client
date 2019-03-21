@@ -6,6 +6,7 @@ const Profile = styled.section`
   width: calc(100% - 128px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 64px;
   text-align: center;
 `
@@ -27,19 +28,25 @@ const Contacts = styled.section`
   }
 `
 
-const Contacts2 = styled.section`
-display: flex;
-justify-content: center;
-font-size: .875rem;
-> span {
-  margin: .25rem;
-}
+const List = styled.section`
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  > span {
+    width: 3rem;
+  }
 `
+
+const user = {
+  name: 'João Silva',
+  title: 'Project Manager @ GoodCompany',
+  company: ''
+}
 
 export default () => (
   <Profile>
     <div>
-      <img src="/static/profile_m.png" alt="profile avatar"/>
+      <img src="/static/images/profile_m.png" alt="profile avatar"/>
     </div>
     <Name>João Silva</Name>
     <Title>Project Manager @ GoodCompany</Title>
@@ -49,11 +56,11 @@ export default () => (
     </Contacts>
     <section>
       <h5>add to:</h5>
-      <ul>
-        <li>v-card</li>
-        <li>linkedin</li>
-        <li>github</li>
-      </ul>
+      <List>
+        <li><span className="icon-profile"></span></li>
+        <li><span className="icon-linkedin"></span></li>
+        <li><span className="icon-github"></span></li>
+      </List>
     </section>
   </Profile>
 )
