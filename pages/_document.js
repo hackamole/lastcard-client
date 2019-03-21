@@ -25,9 +25,13 @@ export default class MyDocument extends Document {
           width: 100%;
           height: 100%;
           color: white;
+          font-family: 'Montserrat', sans-serif;
         `}>
         <Head>
           <title>Last Card</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charSet="utf-8" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet" />
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>

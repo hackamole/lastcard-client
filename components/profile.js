@@ -10,17 +10,43 @@ const Profile = styled.section`
   text-align: center;
 `
 
+const Name = styled.h1`
+  font-size: 3rem;
+`
+
+const Title = styled.h2`
+  font-size: 1rem;
+`
+
+const Contacts = styled.section`
+  display: flex;
+  justify-content: center;
+  font-size: .875rem;
+  > span {
+    margin: .25rem;
+  }
+`
+
+const Contacts2 = styled.section`
+display: flex;
+justify-content: center;
+font-size: .875rem;
+> span {
+  margin: .25rem;
+}
+`
+
 export default () => (
   <Profile>
     <div>
-      <img src="" alt=""/>
+      <img src="/static/profile_m.png" alt="profile avatar"/>
     </div>
-    <h1>Name</h1>
-    <h3>title</h3>
-    <p>
+    <Name>João Silva</Name>
+    <Title>Project Manager @ GoodCompany</Title>
+    <Contacts>
       <span>email</span>
       <span>phone</span>
-    </p>
+    </Contacts>
     <section>
       <h5>add to:</h5>
       <ul>
