@@ -35,6 +35,11 @@ export default class MyDocument extends Document {
           width: 100%;
           height: 100%;
           background: linear-gradient(65.21deg, rgba(48, 35, 174, 0.5) 0%, rgba(200, 109, 215, 0.5) 100%);
+
+          > div {
+            width: 100%;
+            height: 100%;
+          }
         `}>
           <Main />
           <NextScript />
