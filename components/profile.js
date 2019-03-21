@@ -10,29 +10,19 @@ const Profile = styled.section`
   padding: 4rem 2rem;
   text-align: center;
   
-  h1 {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  
-  h2 {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
   > p {
   display: flex;
   justify-content: center;
   flex-direction: column;
   font-size: .875rem;
   
-  > span {
-    margin: .25rem;
-  }
+    > span {
+      margin: .25rem;
+    }
   }
 `
 
-const List = styled.section`
+const List = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-around;
