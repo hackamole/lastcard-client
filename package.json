@@ -1,0 +1,19 @@
+{
+  "name": "lastcard-client",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "styled-components": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0"
+  }
+}
