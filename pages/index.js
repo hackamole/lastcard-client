@@ -22,11 +22,15 @@ const Wrapper = styled.div`
     align-items: flex-end;
     padding: 2rem;
     
+    div.logo {
+      max-width: 60px;
+    }
+    
     nav {
         margin-bottom: 2px;
       a {
         text-decoration: none;
-        color: white;
+        color: #6A38BB;
       }
       > ul {
         display: flex;
@@ -40,28 +44,31 @@ const Wrapper = styled.div`
     position: relative;
     width: 100%;
     height: calc(100% - 4rem);
-    padding: 6rem 2rem 2rem;
+    padding: 4rem 2rem 2rem;
     flex-wrap: wrap;
+    
     div.logo {
-      display: block;
-      max-height: 7rem;
-      align-items: center;
+      width: 200px;
+      margin-bottom: 3rem;
     }
+    
     h1 {
       position: relative;
       font-size: 2.2rem;
+      line-height: 2.6rem;
       max-width: calc(100% - 4rem);
       display: block;
+      color: #6A38BB;
+      
       span {
         text-decoration: underline;
       }
     }
-    
     h2 {
       line-height: 1.5rem;
       max-width: calc(100% - 4rem);
+      color: #6A38BB;
     }
-    
     button {
       position: absolute;
       bottom: 32px;
@@ -70,7 +77,7 @@ const Wrapper = styled.div`
       font-weight: 500;
       border: 0;
       background-color: transparent;
-      color: white;
+      color: #6A38BB;
     }
   }
 `
@@ -89,9 +96,9 @@ export default () => (
     </header>
 
     <div className="hero">
-      <Logo size="20rem" />
+      <Logo size="20rem" full />
       <h1>
-        The only <span>real</span> professional network
+        The <span>real</span> professional network
       </h1>
       <h2>For professional looking to connect to real people that they really know.</h2>
       <button>Get to know more!</button>
