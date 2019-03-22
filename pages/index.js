@@ -18,7 +18,7 @@ const Wrapper = styled.div`
     height: 100%;
     max-height: 6rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
     padding: 2rem;
     
@@ -69,6 +69,7 @@ const Wrapper = styled.div`
       text-decoration: none;
       position: absolute;
       bottom: 32px;
+      right: 32px;
       width: calc(100vw - 4rem);
       height: 64px;
       font-weight: 500;
@@ -91,9 +92,9 @@ export default () => (
     <div className="hero">
       <Logo size="20rem" full />
       <h1>
-        The <span>real</span> professional network
+        A <span>real</span> professional network
       </h1>
-      <h2>For professional looking to connect with people that they really know.</h2>
+      <h2>For professionals looking to connect with people that they really know.</h2>
       <Link href='/about' as='/about'><a>Get to know more!</a></Link>
     </div>
   </Wrapper>
