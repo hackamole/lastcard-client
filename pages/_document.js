@@ -216,11 +216,11 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Last Card</title>
+          {/*<title>Last Card</title>*/}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet" />
-          <link rel="stylesheet" href="https://i.icomoon.io/public/temp/72e8086c6a/UntitledProject/style.css" />
+          <link rel="stylesheet" href="/static/fonts/style.css" />
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>

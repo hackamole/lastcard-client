@@ -74,7 +74,7 @@ export default class CardList extends React.Component {
     return (
       <CardListWrapper>
         {cards.map(card => (
-          <div key={card.uuid}>
+          <div key={card.id}>
             {this.renderCard(card)}
           </div>
         ))}
