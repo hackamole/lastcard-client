@@ -41,13 +41,21 @@ const AboutWrapper = styled.div`
   }
   
   section {
-    min-height: 100vh;
+    //min-height: 100vh;
     padding: 4rem 2rem;
     
     h2 {
       font-size: 1.6rem;
       width: 100%;
       color: #6A38BB;
+    }
+    
+    p {
+      color: #6A38BB;
+      
+      span {
+      
+      }
     }
   }
 `
@@ -87,6 +95,13 @@ export default class About extends React.Component {
             <span className="icon-meet"></span>
             <span className="icon-share"></span>
           </Card>
+          <p>
+            <span>
+              Web Summit? Meetup? Beach Party? <br/>
+            </span>
+            <br/>
+            Had a nice talk with somenone? Got a new awesome card and now don't know what to do with it?
+          </p>
         </section>
         <section className="green">
           <h2>Scan & Takeover</h2>
@@ -94,6 +109,13 @@ export default class About extends React.Component {
             <span className="icon-qrcode"></span>
             <span className="icon-edit"></span>
           </Card>
+          <p>
+            <span>
+              Scan it with your phone... it's just a QRCode (for now!) <br/>
+            </span>
+            <br/>
+            Now you can get all the info connected to the card. The best part is that you can now takeover it, edit your profile and now you have a card with associated with your profile.
+          </p>
         </section>
         <section className="orange">
           <h2>Repeat... forever?</h2>
@@ -101,6 +123,13 @@ export default class About extends React.Component {
             <span className="icon-repeat"></span>
             <span className="icon-infinite"></span>
           </Card>
+          <p>
+            <span>
+              Confereence? Job meeting? Just some social event? <br/>
+            </span>
+            <br/>
+            Meet and share like they did with you. Reuse that card and save some golphins and kitties.
+          </p>
         </section>
       </AboutWrapper>
     )
