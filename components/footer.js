@@ -32,6 +32,7 @@ export default (props) => (
       </nav>
     )}
     <div className="copy">
+      {/*<p>by <a href="https://github.com/hackamole">Hackamole</a></p>*/}
       <p>by Hackamole</p>
     </div>
   </Footer>

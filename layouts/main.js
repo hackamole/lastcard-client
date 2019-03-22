@@ -14,6 +14,6 @@ export default (props) => (
   <Main>
     <Header logo={props.showLogo} />
       {props.children}
-    <Footer />
+    <Footer logo={props.showNav} />
   </Main>
 )
