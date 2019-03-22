@@ -2,7 +2,6 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import styled from 'styled-components'
 import 'isomorphic-unfetch'
-import { get } from '../sdk/cards';
 
 import Spinner from '../components/spinner'
 
@@ -25,10 +24,10 @@ const DynamicCardsWithLoading = dynamic(() => import('../components/cardList'), 
 export default class Profile extends React.Component {
   static async getInitialProps() {
     // eslint-disable-next-line no-undef
-    const cardsRes = await fetch('http://localhost:8000/cards/');   
+    const cardsRes = await fetch('http://localhost:8000/cards/');
     const cards = await cardsRes.json();
-    
-    const usersRes = await fetch('http://localhost:8000/users/');   
+
+    const usersRes = await fetch('http://localhost:8000/users/');
     const users = await usersRes.json();
     return { cards, users };
   }
