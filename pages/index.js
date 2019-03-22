@@ -13,20 +13,38 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     
     div.logo {
-      width: 260px;
-      margin-bottom: 3rem;
-      margin-top: 6rem;
+      margin-bottom: 2rem;
+      @media (min-width: 475px) {
+        margin-bottom: 3rem;
+      }
+      
+      h1 {
+        max-width: 260px;
+        margin-top: 3rem;
+        
+        @media (min-width: 475px) {
+          margin-top: 6rem;
+        }
+      }
     }
     
     h2 {
-      font-size: 2rem;
+      font-size: 1.2rem;
       line-height: .8;
       margin-left: 22px;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
       max-width: 66%;
       
+      @media (min-width: 475px) {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+      }
+      
       span {
-        font-size: 3rem;
+        font-size: 2rem;
+        @media (min-width: 475px) {
+          font-size: 3rem;
+        }
       }
     }
     

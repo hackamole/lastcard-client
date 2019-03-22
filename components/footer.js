@@ -5,11 +5,12 @@ import styled from 'styled-components'
 const Footer = styled.footer`
   position: absolute;
   bottom: 1rem;
-  width: 100%;
+  width: calc(100% - 4rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 75rem;
+  padding: 0 2rem;
   
   nav {
     a {
