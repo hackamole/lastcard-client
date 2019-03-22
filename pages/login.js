@@ -2,6 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Login = styled.section`
+button.primary,
+  button.secundary {
+    width: 45%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6A38BB;
+    color: white;
+    font-size: .875rem;
+    margin-bottom: 1rem;
+    span {
+      margin-left: .4rem;
+    }
+  }
   height: calc(100% - 8rem);
   width: calc(100% - 4rem);
   display: flex;
@@ -29,8 +44,7 @@ const Login = styled.section`
     > span {
       margin: .25rem;
     }
-  }
-  
+  }  
   ul {
     display: flex;
     justify-content: space-around;
@@ -44,15 +58,15 @@ const Login = styled.section`
       }
     }
   }
+  input {
+    line-height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+  }
 `
 
-const Input = styled.input`
-  line-height: 3rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 0.75rem;
-  margin-bottom: 2rem;
-`
 
 export default ({user}) => (
   <Login>
@@ -61,8 +75,11 @@ export default ({user}) => (
     </div>
     <h1 className="name">Login</h1>
     <p className="contacts">
-      <Input placeholder="login" />
-      <Input placeholder="password" />
+      <input placeholder="login" />
+      <input placeholder="password" />
+      <button className="primary" onClick={() => {}}>
+        Login
+      </button>
     </p>
   </Login>
 )
