@@ -13,12 +13,14 @@ const Wrapper = styled.div`
   header {
     box-sizing: border-box;
     height: 100%;
-    max-height: 4rem;
+    max-height: 6rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    align-items: flex-end;
+    padding: 2rem;
+    
     nav {
+        margin-bottom: 2px;
       a {
         text-decoration: none;
         color: white;
@@ -32,33 +34,40 @@ const Wrapper = styled.div`
   }
   
   div.hero {
+    position: relative;
     width: 100%;
     height: calc(100% - 4rem);
-    display: flex;
-    padding: 6rem 1rem;
-    position: relative;
+    padding: 6rem 2rem 2rem;
     flex-wrap: wrap;
-    justify-content: center;
-    
-    span {
-      top: 12rem;
-      left: -2rem;
-      position: absolute;
-      width: 25%;
+    div.logo {
+      display: block;
+      max-height: 7rem;
+      align-items: center;
+    }
+    h1 {
+      position: relative;
+      font-size: 2.2rem;
+      max-width: calc(100% - 4rem);
+      display: block;
+      span {
+        text-decoration: underline;
+      }
     }
     
-    h1 {
-      max-width: 90%;
-      text-align: right;
+    h2 {
+      line-height: 1.5rem;
+      max-width: calc(100% - 4rem);
     }
     
     button {
-      width: 60%;
+      position: absolute;
+      bottom: 32px;
+      width: calc(100vw - 4rem);
       height: 64px;
-      border: 4px solid #787878;
+      font-weight: 500;
+      border: 0;
       background-color: transparent;
-      color: #787878;
-      font-weight: bold;
+      color: white;
     }
   }
 `
@@ -77,8 +86,11 @@ export default () => (
     </header>
 
     <div className="hero">
-      <Logo size="8rem" />
-      <h1>Share, reuse and track your visit cards and connections.</h1>
+      <Logo size="20rem" />
+      <h1>
+        The only <span>real</span> professional network
+      </h1>
+      <h2>For professional looking to connect to real people that they really know.</h2>
       <button>Get to know more!</button>
     </div>
   </Wrapper>
