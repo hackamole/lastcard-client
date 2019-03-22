@@ -24,6 +24,7 @@ const Html = styled.html`
     font-size: 1em;
   }
   a {
+    color: #6A38BB;
     background-color: transparent;
     text-decoration: none;
   }
