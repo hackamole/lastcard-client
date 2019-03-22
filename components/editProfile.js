@@ -27,27 +27,7 @@ const EditProfileWrapper = styled.section`
       top: 0;
       background-color: #E8E8E8;
       opacity: 1;
-      transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     }
-    
-    img {
-        z-index: 1;
-        width: 2rem;
-        position: fixed;
-        top: 2rem;
-        left: calc(100% - 4rem);
-        margin: 0;
-        padding: 0;
-        outline: none;
-        //transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        &.isExpanded {
-          top: 4rem;
-          left: 2rem;
-          width: 6rem;
-          //transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-      }
     
     > div {
       width: calc(100% - 4rem);
@@ -56,12 +36,11 @@ const EditProfileWrapper = styled.section`
       padding: 10rem 2rem 2rem;
       opacity: 0;
       visibility: hidden;
-      //transition: all 50ms cubic-bezier(0.075, 0.82, 0.165, 1);
-      
+      overflow: hidden;
       &.isExpanded {
         opacity: 1;
         visibility: visible;
-        //transition: 50ms all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: 250ms all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
       }
       
       h1.name {
@@ -147,14 +126,14 @@ const EditProfileWrapper = styled.section`
       opacity: 0;
       display: block;
       visibility: hidden;
-      span {
-        font-size: 1.5rem;
-        color: #787878;
-      }
+      transition: 500ms all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
       &.isExpanded {
         opacity: 1;
         visibility: visible;
-        //transition: 50ms visibility 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      span {
+        font-size: 1.5rem;
+        color: #787878;
       }
     }
   }
