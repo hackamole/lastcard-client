@@ -28,6 +28,7 @@ const EditProfileWrapper = styled.section`
       top: 0;
       background-color: #E8E8E8;
       opacity: 1;
+      border-radius: 0;
     }
     
     > div {
