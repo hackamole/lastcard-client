@@ -37,9 +37,9 @@ export default class CardList extends React.Component {
     const { cards } = this.props;
 
     // eslint-disable-next-line no-undef
-    // const res = await fetch(api.cards)
-    // const json = await res.json()
-    // return { user: json.stargazers_count }
+    const res = await fetch(api.cards)
+    const json = await res.json()
+    return { user: json.stargazers_count }
     return { cards: cards, users: {
         [cards[0].id]: {
 

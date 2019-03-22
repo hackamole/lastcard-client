@@ -5,6 +5,8 @@ import 'isomorphic-unfetch'
 
 import Takeover from '../components/takeover'
 import Spinner from '../components/spinner'
+import Router from 'next/router';
+
 
 const CardWrapper = styled.div`
   height: 100%;
@@ -19,29 +21,14 @@ const DynamicComponentWithLoading = dynamic(() => import('../components/profile'
 })
 
 export default class Card extends React.Component {
-  static async getInitialProps () {
+  static async getInitialProps({ query }) {
+    console.log('DEBUG', query);
+    
     // eslint-disable-next-line no-undef
-    // const res = await fetch(api.cards)
-    // const json = await res.json()
-    // return { user: json.stargazers_count }
-    return {
-      card: {
+    const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`);
+    const card = await cardRes.json();
 
-      },
-      user: {
-        name: 'João Silva',
-        title: 'Project Manager',
-        company: 'Good Company',
-        contacts: {
-          phone: '+351 912 345 678',
-          email: 'joaosilva@goodcompany.com',
-        },
-        links: {
-          linkedin: 'url',
-          github: 'url',
-          vcard: ':)',
-        },
-      } }
+    return { user: card.current_user }
   }
 
   render () {
