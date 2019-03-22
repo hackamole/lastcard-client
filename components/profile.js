@@ -51,17 +51,17 @@ export default ({user}) => (
     <div>
       <img src="/static/images/profile_m.png" alt="profile avatar"/>
     </div>
-    <h1 className="name">{user.name}</h1>
-    <h2 className="title">{user.title} @ {user.company}</h2>
+    <h1 className="name">{user.first_name} {user.last_name}</h1>
+    <h2 className="title">{user.title || 'UFO'} @ {user.company || 'Rainbows factory'}</h2>
     <p className="contacts">
-      <span>{user.contacts.email}</span>
-      <span>{user.contacts.phone}</span>
+      <span>{user.email}</span>
+      <span>{user.mobile}</span>
     </p>
     <section>
       <ul>
-        <li><a href={user.links.linkedin}><span className="icon-linkedin"></span></a></li>
-        <li><a href={user.links.github}><span className="icon-github"></span></a></li>
-        <li><a href={user.links.vcard}><span className="icon-profile"></span></a></li>
+        <li><a href={user.social_profile}><span className="icon-linkedin"></span></a></li>
+        <li><a href={user.social_profile}><span className="icon-github"></span></a></li>
+        <li><a href={user.social_profile}><span className="icon-profile"></span></a></li>
       </ul>
     </section>
   </Profile>
