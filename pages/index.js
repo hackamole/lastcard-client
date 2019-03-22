@@ -37,6 +37,8 @@ const Wrapper = styled.div`
     display: flex;
     padding: 6rem 1rem;
     position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
     
     span {
       top: 12rem;
@@ -48,6 +50,15 @@ const Wrapper = styled.div`
     h1 {
       max-width: 90%;
       text-align: right;
+    }
+    
+    button {
+      width: 60%;
+      height: 64px;
+      border: 4px solid #787878;
+      background-color: transparent;
+      color: #787878;
+      font-weight: bold;
     }
   }
 `
@@ -68,6 +79,7 @@ export default () => (
     <div className="hero">
       <Logo size="8rem" />
       <h1>Share, reuse and track your visit cards and connections.</h1>
+      <button>Get to know more!</button>
     </div>
   </Wrapper>
 )
