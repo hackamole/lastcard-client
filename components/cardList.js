@@ -2,32 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CardListWrapper = styled.section`
+  padding: 8rem 2rem 2rem;
 `
 
 const Card = styled.article`
-  width: 350px;
-  height: 200px;
+  width: calc(350px / 1.25);
+  height: calc(200px / 1.25);
   background-color: white;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #787878;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
 `
 
 export default class CardList extends React.Component {
-  static async getInitialProps () {
-    // eslint-disable-next-line no-undef
-    // const res = await fetch(api.cards)
-    // const json = await res.json()
-    // return { cards: json.stargazers_count }
-    return { cards: [
-        {
-          uuid: 1,
-        },
-    ]}
-  }
-
   renderCard (card) {
-    console.log(card);
     return (
       <Card>
-
+        card #{card.uuid}
       </Card>
     )
   }
@@ -38,7 +34,7 @@ export default class CardList extends React.Component {
       <CardListWrapper>
         {cards.map(card => (
           <div key={card.uuid}>
-            {() => this.renderCard(card)}
+            {this.renderCard(card)}
           </div>
         ))}
       </CardListWrapper>

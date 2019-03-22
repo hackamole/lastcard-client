@@ -24,7 +24,11 @@ export default class Card extends React.Component {
     // const res = await fetch(api.cards)
     // const json = await res.json()
     // return { user: json.stargazers_count }
-    return { user: {
+    return {
+      card: {
+
+      },
+      user: {
         name: 'João Silva',
         title: 'Project Manager',
         company: 'Good Company',

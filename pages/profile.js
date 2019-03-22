@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic'
 import styled from 'styled-components'
 import 'isomorphic-unfetch'
 
-import Takeover from '../components/takeover'
 import Spinner from '../components/spinner'
 
 const ProfileWrapper = styled.div`
@@ -14,7 +13,11 @@ const ProfileWrapper = styled.div`
   align-items: center;
 `
 
-const DynamicComponentWithLoading = dynamic(() => import('../components/editProfile'), {
+const DynamicProfileWithLoading = dynamic(() => import('../components/editProfile'), {
+  loading: () => <Spinner />
+})
+
+const DynamicCardsWithLoading = dynamic(() => import('../components/cardList'), {
   loading: () => <Spinner />
 })
 
@@ -24,7 +27,8 @@ export default class Profile extends React.Component {
     // const res = await fetch(api.cards)
     // const json = await res.json()
     // return { user: json.stargazers_count }
-    return { user: {
+    return {
+      user: {
         name: 'Joana Santos',
         title: 'CTO',
         company: 'Boogle',
@@ -37,13 +41,26 @@ export default class Profile extends React.Component {
           github: 'url',
           vcard: 'url',
         },
-      } }
+      },
+      cards: [
+        {
+          uuid: 1,
+        },
+        {
+          uuid: 2,
+        },
+        {
+          uuid: 3,
+        },
+      ],
+    }
   }
 
   render () {
     return (
       <ProfileWrapper>
-        <DynamicComponentWithLoading user={this.props.user} />
+        <DynamicProfileWithLoading user={this.props.user} />
+        <DynamicCardsWithLoading cards={this.props.cards} />
       </ProfileWrapper>
     )
   }
