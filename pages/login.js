@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Router from 'next/router';
 
 const Login = styled.section`
 button.primary,
@@ -77,7 +78,7 @@ export default ({user}) => (
     <p className="contacts">
       <input placeholder="login" />
       <input placeholder="password" />
-      <button className="primary" onClick={() => {}}>
+      <button className="primary" onClick={() => {Router.push('/profile')}}>
         Login
       </button>
     </p>
