@@ -6,7 +6,10 @@ import Logo from '../components/logo';
 
 const Wrapper = styled.div`
   height: 100%;
+  max-height: 100%;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   
