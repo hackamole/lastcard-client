@@ -186,8 +186,8 @@ export default class EditProfile extends React.Component {
   state = {
     hasChanges: false,
     isExpanded: false,
-    linkedin: this.props.user.links.linkedin,
-    github: this.props.user.links.github,
+    linkedin: this.props.user.links.linkedin || 'linkedin-url-here',
+    github: this.props.user.links.github || 'github-url-here',
   }
 
   onChange = (e, name) => {

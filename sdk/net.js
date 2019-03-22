@@ -1,4 +1,3 @@
-import Cookie from 'universal-cookie';
 import { stringify } from 'query-string';
 import { api } from '../config';
 
@@ -8,21 +7,6 @@ class NetworkError extends Error {
     this.response = response;
     this.data = json;
   }
-}
-
-const COOKIE = new Cookie();
-
-/**
- *
- * @returns {String} token
- */
-function getToken() {
-  const token = COOKIE.get('dott-api-token');
-  if (!token) {
-    return null;
-  }
-
-  return `Bearer ${token}`;
 }
 
 /**
@@ -43,14 +27,9 @@ export async function xhr(opt) {
     },
   } = opt;
 
-  const authorization = getToken();
-  // set the authorization header
-  if (authorization) {
-    headers.Authorization = authorization;
-  }
   const options = {
     method,
-    mode: 'cors',
+    // mode: 'cors',
     headers: typeof Headers === 'undefined' ? headers : new Headers(headers),
   };
   if (data) {
@@ -60,6 +39,8 @@ export async function xhr(opt) {
   if (query) {
     url += `?${stringify(query)}`;
   }
+  console.log('DEBUG URL', );
+  
   // start request
   return fetch(url, options).then((res) => {
     if (res.status === 204) {

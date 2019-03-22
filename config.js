@@ -1,4 +1,4 @@
 
 export const api = {
-  baseURL: 'https://api../v1',
+  baseURL: 'http://localhost:8000',
 };
