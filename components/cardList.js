@@ -30,16 +30,29 @@ const Card = styled.article`
     }
   }
 `
-
+// card_url:
+// null
+// created_at:
+// "2019-03-22T12:03:46.488465Z"
+// current_user:
+// { … }
+// id:
+// "ec113dbe-c8a0-4b33-a27d-f2ef3f54016c"
+// modified_at:
+// "2019-03-22T12:05:15.693924Z"
+// original_user:
+// { … }
+// qr_code_url:
+// null
 export default class CardList extends React.Component {
   static async getInitialProps () {
     // for each card get userdetails
     const { cards } = this.props;
 
     // eslint-disable-next-line no-undef
-    // const res = await fetch(api.cards)
-    // const json = await res.json()
-    // return { user: json.stargazers_count }
+    const res = await fetch(api.cards)
+    const json = await res.json()
+    return { user: json.stargazers_count }
     return { cards: cards, users: {
         [cards[0].id]: {
 

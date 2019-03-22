@@ -5,6 +5,8 @@ import 'isomorphic-unfetch'
 
 import Takeover from '../components/takeover'
 import Spinner from '../components/spinner'
+import Router from 'next/router';
+
 
 const CardWrapper = styled.div`
   height: 100%;
@@ -19,7 +21,9 @@ const DynamicComponentWithLoading = dynamic(() => import('../components/profile'
 })
 
 export default class Card extends React.Component {
-  static async getInitialProps () {
+  static async getInitialProps({ query }) {
+    console.log(query);
+    
     // eslint-disable-next-line no-undef
     // const res = await fetch(api.cards)
     // const json = await res.json()
