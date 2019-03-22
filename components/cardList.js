@@ -12,18 +12,59 @@ const Card = styled.article`
   margin-bottom: 3rem;
   border-radius: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   color: #787878;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-
+  header {
+    width: 100%;
+    padding: 1rem;
+    text-align: right;
+    font-size: .875rem;
+  }
+  div {
+    width: 100%;
+    padding: 1rem;
+    h3 {
+      font-weight: 600;
+    }
+  }
 `
 
 export default class CardList extends React.Component {
+  static async getInitialProps () {
+    // for each card get userdetails
+    const { cards } = this.props;
+
+    // eslint-disable-next-line no-undef
+    // const res = await fetch(api.cards)
+    // const json = await res.json()
+    // return { user: json.stargazers_count }
+    return { cards: cards, users: {
+        [cards[0].id]: {
+
+        }
+      }}
+  }
+
+  state = {
+    cards: {},
+  }
+
   renderCard (card) {
+      // id: 1234,
+      // original_user: 1,
+      // card_url: 'url',
+      // qr_code_url: 'url',
+      // created_at: 'timestamp',
+      // modified_at: 'timestamp',
+      // current_user: null
     return (
       <Card>
-        card #{card.uuid}
+        <header>{card.id}</header>
+        <div>
+          <h3>{card.original_user}</h3>
+        </div>
       </Card>
     )
   }

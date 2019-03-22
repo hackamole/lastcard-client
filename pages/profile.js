@@ -44,13 +44,13 @@ export default class Profile extends React.Component {
       },
       cards: [
         {
-          uuid: 1,
-        },
-        {
-          uuid: 2,
-        },
-        {
-          uuid: 3,
+          id: 1234,
+          original_user: 1,
+          card_url: 'url',
+          qr_code_url: 'url',
+          created_at: 'timestamp',
+          modified_at: 'timestamp',
+          current_user: null
         },
       ],
     }
