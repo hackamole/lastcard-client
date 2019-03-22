@@ -33,9 +33,9 @@ export default class Card extends React.Component {
           email: 'joaosilva@goodcompany.com',
         },
         links: {
-          linkedin: '',
-          github: '',
-          vcard: '',
+          linkedin: 'url',
+          github: 'url',
+          vcard: ':)',
         },
       } }
   }

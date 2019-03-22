@@ -33,9 +33,9 @@ export default class Profile extends React.Component {
           email: 'joanasantos@boogle.com',
         },
         links: {
-          linkedin: '',
-          github: '',
-          vcard: '',
+          linkedin: 'url',
+          github: 'url',
+          vcard: 'url',
         },
       } }
   }

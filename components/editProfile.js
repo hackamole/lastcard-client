@@ -90,8 +90,18 @@ const EditProfileWrapper = styled.section`
       }
       
       div.actions {
+        position: fixed;
+        bottom: 2rem;
+        width: calc(100% - 4rem);
         display: flex;
         justify-content: space-between;
+        opacity: 0;
+        visibility: hidden;
+        &.hasChanges {
+          opacity: 1;
+          visibility: visible;
+          transition: all 100ms ease-in;
+        }
         button.primary,
         button.secundary {
           width: 45%;
@@ -172,15 +182,32 @@ export default class EditProfile extends React.Component {
   }
 
   state = {
+    hasChanges: false,
     isExpanded: false,
+    linkedin: this.props.user.links.linkedin,
+    github: this.props.user.links.github,
+  }
+
+  onChange = (e, name) => {
+    this.setState({[name]: e.currentTarget.value, hasChanges: true})
   }
 
   togglePanel = () => {
     this.setState(prevState => ({isExpanded: !prevState.isExpanded}))
   }
 
+  reset = () => {
+    const { linkedin, github } = this.props.user.links;
+    this.setState({linkedin: linkedin, github: github, hasChanges: false})
+  }
+
+  submit = () => {
+    console.log(this.state);
+    //submit();
+  }
+
   render () {
-    const { isExpanded } = this.state;
+    const { hasChanges, isExpanded, linkedin, github } = this.state;
     const { user } = this.props;
     return (
       <EditProfileWrapper>
@@ -209,20 +236,28 @@ export default class EditProfile extends React.Component {
               <ul>
                 <li><div>
                   <span className="icon-linkedin"></span>
-                  <input type="text" name="linkedin" value={user.links.linkedin} />
+                  <input
+                    onChange={(e) => this.onChange(e, 'linkedin')}
+                    type="text"
+                    name="linkedin"
+                    value={linkedin} />
                 </div></li>
                 <li><div>
                   <span className="icon-github"></span>
-                  <input type="text" name="github" value={user.links.github} />
+                  <input
+                    onChange={(e) => this.onChange(e, 'github')}
+                    type="text"
+                    name="github"
+                    value={github} />
                 </div></li>
               </ul>
 
-              <div className="actions">
-                <button className="secundary">
-                  save
-                </button>
-                <button className="primary">
+              <div className={hasChanges ? 'actions hasChanges' : 'actions'}>
+                <button className="secundary" onClick={this.reset}>
                   discard
+                </button>
+                <button className="primary" onClick={this.submit}>
+                  save
                 </button>
               </div>
 
