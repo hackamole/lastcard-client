@@ -72,7 +72,6 @@ const Html = styled.html`
   textarea {
     font-family: inherit; /* 1 */
     font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
   }
   button,

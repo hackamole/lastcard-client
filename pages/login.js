@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Profile = styled.section`
+const Login = styled.section`
   height: calc(100% - 8rem);
   width: calc(100% - 4rem);
   display: flex;
@@ -46,23 +46,23 @@ const Profile = styled.section`
   }
 `
 
+const Input = styled.input`
+  line-height: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+`
+
 export default ({user}) => (
-  <Profile>
+  <Login>
     <div>
       <img src="/static/images/profile_m.png" alt="profile avatar"/>
     </div>
-    <h1 className="name">{user.first_name} {user.last_name}</h1>
-    <h2 className="title">{user.title || 'UFO'} @ {user.company || 'Rainbows factory'}</h2>
+    <h1 className="name">Login</h1>
     <p className="contacts">
-      <span>{user.email}</span>
-      <span>{user.mobile}</span>
+      <Input placeholder="login" />
+      <Input placeholder="password" />
     </p>
-    <section>
-      <ul>
-        <li><a href={user.social_profile}><span className="icon-linkedin"></span></a></li>
-        <li><a href={user.social_profile}><span className="icon-github"></span></a></li>
-        <li><a href={user.social_profile}><span className="icon-profile"></span></a></li>
-      </ul>
-    </section>
-  </Profile>
+  </Login>
 )
