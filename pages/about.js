@@ -8,56 +8,65 @@ import Logo from '../components/logo'
 
 
 const AboutWrapper = styled.div`
+  padding: 0 10rem;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
   
-  header {
-    box-sizing: border-box;
-    height: 100%;
-    max-height: 6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 2rem;
-    
-    div.logo {
-      max-width: 60px;
-    }
-    
-    nav {
-        margin-bottom: 2px;
-      a {
-        text-decoration: none;
-        color: #6A38BB;
-      }
-      > ul {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-      }
-    }
-  }
-  
   h1 {
-    text-align: center;
+    padding: 0 2rem;
+    
+    @media (min-width: 475px) {
+      padding: 2rem 2rem 0;
+    }
   }
   
   section {
-    //min-height: 100vh;
     padding: 4rem 2rem;
+    display: flex;
+    
+    @media (min-width: 475px) {
+      padding: 1rem 2rem 2rem;
+    }
+    &:last-of-type {
+      margin-bottom: 8rem;
+    }
+    
+    div:last-of-type {
+      align-self: flex-end;
+    }
     
     h2 {
       font-size: 1.6rem;
       width: 100%;
       color: #6A38BB;
+      @media (min-width: 475px) {
+        margin-left: 2rem;
+      }
+      
+      &.mobile {
+        display: block;
+        @media (min-width: 475px) {
+          display: none;
+        }
+      }
+      
+      &.laptop {
+        display: none;
+        @media (min-width: 475px) {
+          display: block;
+        }
+      }
     }
     
     p {
+      align-self: flex-end;
       color: #6A38BB;
-      
-      span {
-      
+      @media (min-width: 475px) {
+        align-self: flex-end;
+        padding-bottom: 4rem;
+        margin-left: 2rem;
+        max-width: 50%;
       }
     }
   }
@@ -88,46 +97,60 @@ export default class About extends React.Component {
         <AboutWrapper>
           <h1>How to use</h1>
           <section className="red">
-            <h2>Meet & Share</h2>
-            <Card>
-              <span className="icon-meet"></span>
-              <span className="icon-share"></span>
-            </Card>
-            <p>
-              <span>
-                Web Summit? Meetup? Beach Party? <br/>
-              </span>
-              <br/>
-              Had a nice talk with someone? Got a new awesome card and now don't know what to do with it?
-            </p>
+            <div>
+              <h2 className="mobile">Meet & Share</h2>
+              <Card>
+                <span className="icon-meet" />
+                <span className="icon-share" />
+              </Card>
+            </div>
+            <div>
+              <h2 className="laptop">Meet & Share</h2>
+              <p>
+                <span>
+                  Web Summit? Meetup? Beach Party? <br/>
+                </span>
+                <br/>
+                Had a nice talk with someone? Got a new awesome card and now don't know what to do with it?
+              </p>
+            </div>
           </section>
           <section className="green">
-            <h2>Scan & Takeover</h2>
-            <Card>
-              <span className="icon-qrcode"></span>
-              <span className="icon-edit"></span>
-            </Card>
-            <p>
-              <span>
-                Scan it with your phone... it's just a QRCode (for now!) <br/>
-              </span>
-              <br/>
-              Now that you have access to the profile associated with the card, you can create your own profile and takeover the card, making it yours.
-            </p>
+            <div>
+              <Card>
+                <span className="icon-qrcode" />
+                <span className="icon-edit" />
+              </Card>
+            </div>
+            <div>
+              <h2 className="laptop">Scan & Takeover</h2>
+              <p>
+                <span>
+                  Scan it with your phone... it's just a QRCode (for now!) <br/>
+                </span>
+                <br/>
+                Now that you have access to the profile associated with the card, you can create your own profile and takeover the card, making it yours.
+              </p>
+            </div>
           </section>
           <section className="orange">
-            <h2>Repeat... Repeat...</h2>
-            <Card>
-              <span className="icon-repeat"></span>
-              <span className="icon-infinite"></span>
+            <div>
+              <h2 className="mobile">Repeat... Repeat...</h2>
+              <Card>
+                <span className="icon-repeat" />
+                <span className="icon-infinite" />
             </Card>
-            <p>
-              <span>
-                Conference? Job meeting? Just some social event? <br/>
-              </span>
-              <br/>
-              Meet with others and share like they did with you. Reuse that card and save some dolphins and kitties.
-            </p>
+            </div>
+            <div>
+              <h2 className="laptop">Repeat... Repeat...</h2>
+              <p>
+                <span>
+                  Conference? Job meeting? Just some social event? <br/>
+                </span>
+                <br/>
+                Meet with others and share like they did with you. Reuse that card and save some dolphins and kitties.
+              </p>
+            </div>
           </section>
         </AboutWrapper>
       </Page>
