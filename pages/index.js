@@ -3,43 +3,13 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import Logo from '../components/logo';
+import Page from '../layouts/main'
 
 const Wrapper = styled.div`
-  height: 100%;
-  max-height: 100%;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  
-  header {
-    box-sizing: border-box;
-    height: 100%;
-    max-height: 6rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 2rem;
-    
-    div.logo {
-      max-width: 60px;
-    }
-    
-    nav {
-      margin-bottom: 2px;
-      a {
-        font-weight: 600;
-        text-decoration: none;
-        color: #6A38BB;
-      }
-    }
-  }
-  
   div.hero {
     position: relative;
     width: 100%;
-    height: calc(100% - 4rem);
+    height: auto;
     padding: 4rem 2rem 2rem;
     flex-wrap: wrap;
     
@@ -81,21 +51,16 @@ const Wrapper = styled.div`
 `
 
 export default () => (
-  <Wrapper>
-    <header>
-      {/*<Link href='/' as='/'><a><Logo /></a></Link>*/}
-      <nav>
-        <Link href='/login' as='/login'><a>login</a></Link>
-      </nav>
-    </header>
-
-    <div className="hero">
-      <Logo size="20rem" full />
-      <h1>
-        A <span>real</span> professional network
-      </h1>
-      <h2>For professionals looking to connect with people that they really know.</h2>
-      <Link href='/about' as='/about'><a>Get to know more!</a></Link>
-    </div>
-  </Wrapper>
+  <Page>
+    <Wrapper>
+      <div className="hero">
+        <Logo size="20rem" full />
+        <h1>
+          A <span>real</span> professional network
+        </h1>
+        <h2>For professionals looking to connect with people that they really know.</h2>
+        <Link href='/about' as='/about'><a>Get to know more!</a></Link>
+      </div>
+    </Wrapper>
+  </Page>
 )
