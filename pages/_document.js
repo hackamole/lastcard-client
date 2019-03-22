@@ -164,8 +164,10 @@ const Html = styled.html`
     height: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient(65.21deg, rgba(15, 188, 53, 0.5) 0%, rgba(196, 246, 106, 0.5) 100%);
-    //background: linear-gradient(65.21deg, rgba(48, 35, 174, 0.5) 0%, rgba(200, 109, 215, 0.5) 100%);
+    background-image: linear-gradient(65.21deg, rgba(15, 188, 53, 0.5) 0%, rgba(196, 246, 106, 0.5) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
     > div {
       width: 100%;
       height: 100%;

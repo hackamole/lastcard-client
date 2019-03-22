@@ -27,7 +27,7 @@ const Wrapper = styled.div`
     }
     
     nav {
-        margin-bottom: 2px;
+      margin-bottom: 2px;
       a {
         font-weight: 600;
         text-decoration: none;
@@ -82,7 +82,7 @@ const Wrapper = styled.div`
 export default () => (
   <Wrapper>
     <header>
-      <Link href='/' as='/'><a><Logo /></a></Link>
+      {/*<Link href='/' as='/'><a><Logo /></a></Link>*/}
       <nav>
         <Link href='/login' as='/login'><a>login</a></Link>
       </nav>
