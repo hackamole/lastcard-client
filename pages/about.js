@@ -1,17 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 
 import Page from '../layouts/main'
 
-import Logo from '../components/logo'
-
-
 const AboutWrapper = styled.div`
-  padding: 0 10rem;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+  
+  @media (min-width: 475px) {
+    padding: 0 10rem;
+  }
   
   h1 {
     padding: 0 2rem;
@@ -22,12 +21,16 @@ const AboutWrapper = styled.div`
   }
   
   section {
-    padding: 4rem 2rem;
+    padding: 2rem;
     display: flex;
+    flex-direction: column;
     
     @media (min-width: 475px) {
+      flex-direction: row;
+      display: flex;
       padding: 1rem 2rem 2rem;
     }
+    
     &:last-of-type {
       margin-bottom: 8rem;
     }
@@ -96,7 +99,7 @@ export default class About extends React.Component {
       <Page showLogo showNav>
         <AboutWrapper>
           <h1>How to use</h1>
-          <section className="red">
+          <section>
             <div>
               <h2 className="mobile">Meet & Share</h2>
               <Card>
@@ -115,8 +118,9 @@ export default class About extends React.Component {
               </p>
             </div>
           </section>
-          <section className="green">
+          <section>
             <div>
+              <h2 className="mobile">Scan & Takeover</h2>
               <Card>
                 <span className="icon-qrcode" />
                 <span className="icon-edit" />
@@ -133,7 +137,7 @@ export default class About extends React.Component {
               </p>
             </div>
           </section>
-          <section className="orange">
+          <section>
             <div>
               <h2 className="mobile">Repeat... Repeat...</h2>
               <Card>
