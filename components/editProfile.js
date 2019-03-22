@@ -13,12 +13,13 @@ const EditProfileWrapper = styled.section`
   
   div.edit-panel {
     position: fixed;
+    width: 32px;
     height: 32px;
-    width: 0;
     padding: 0;
     right: 48px;
     top: 40px;
     opacity: 0;
+    border-radius: 50%;
     transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     &.isExpanded {
       height: 100%;
