@@ -43,14 +43,13 @@ const TakeoverWrapper = styled.section`
     section {
       width: 100%;
       
-      button.login {
+      button.primary {
         width: 100%;
         height: 64px;
         display: flex;
         justify-content: center;
         align-items: center;
         background: #797979;
-        border-radius: 8px;
         color: white;
         font-size: 1.2rem;
         margin-bottom: 1rem;
@@ -91,10 +90,10 @@ export default class Takeover extends React.Component {
         <div>
           <p>Please login to see card history and to be able to reset the card and enable super powers!!</p>
           <section>
-            <button className="login">
+            <button className="primary">
               login with <span className="icon-github"></span>
             </button>
-            <button className="login">
+            <button className="primary">
               login with <span className="icon-linkedin"></span>
             </button>
           </section>

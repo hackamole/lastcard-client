@@ -43,7 +43,6 @@ export default class Profile extends React.Component {
   render () {
     return (
       <ProfileWrapper>
-        {/*<Takeover />*/}
         <DynamicComponentWithLoading user={this.props.user} />
       </ProfileWrapper>
     )
