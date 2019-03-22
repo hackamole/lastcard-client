@@ -13,23 +13,15 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     
     div.logo {
-      width: 256px;
+      width: 260px;
       margin-bottom: 3rem;
     }
     
-    h1 {
-      padding-left: 19px;
-      margin: 8px 0;
-      
-      span {
-        text-decoration: underline;
-      }
-    }
     h2 {
-      line-height: 1.5rem;
+      font-size: 2rem;
       max-width: calc(100% - 4rem);
-      color: #6A38BB;
     }
+    
     a {
       text-decoration: none;
       position: absolute;
@@ -50,9 +42,7 @@ export default () => (
     <Wrapper>
       <div className="hero">
         <Logo size="20rem" full />
-        <h2>
-          A <span>real</span> professional network
-        </h2>
+        <h2>A <u>real</u> professional network</h2>
         <h2>For professionals looking to connect with people that they really know.</h2>
         <Link href='/about' as='/about'><a>Get to know more!</a></Link>
       </div>

@@ -14,10 +14,6 @@ const Html = styled.html`
   main {
     display: block;
   }
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
   hr {
     box-sizing: content-box;
     height: 0;
@@ -174,22 +170,18 @@ const Html = styled.html`
   }
   
   h1 {
-    font-size: 3rem;
-    font-weight: 600;
     line-height: .75;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
-    font-size: 1rem;
     font-weight: 500;
-    line-height: 19px;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   h3 {
-    font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 16px;
   }
 `

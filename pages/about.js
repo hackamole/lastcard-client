@@ -41,7 +41,6 @@ const AboutWrapper = styled.div`
   
   h1 {
     text-align: center;
-    color: #6A38BB;
   }
   
   section {
