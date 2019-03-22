@@ -15,24 +15,27 @@ const Wrapper = styled.div`
     div.logo {
       width: 260px;
       margin-bottom: 3rem;
+      margin-top: 6rem;
     }
     
     h2 {
       font-size: 2rem;
-      max-width: calc(100% - 4rem);
+      line-height: .8;
+      margin-left: 22px;
+      margin-bottom: 4rem;
+      max-width: 66%;
+      
+      span {
+        font-size: 3rem;
+      }
     }
     
-    a {
+    .action {
       text-decoration: none;
-      position: absolute;
-      bottom: 32px;
-      right: 32px;
-      width: calc(100vw - 4rem);
-      height: 64px;
+      border: 1px solid #6A38BB;
+      margin-left: 22px;
+      padding: 1rem 3rem;
       font-weight: 500;
-      border: 0;
-      background-color: transparent;
-      color: #6A38BB;
     }
   }
 `
@@ -42,9 +45,11 @@ export default () => (
     <Wrapper>
       <div className="hero">
         <Logo size="20rem" full />
-        <h2>A <u>real</u> professional network</h2>
-        <h2>For professionals looking to connect with people that they really know.</h2>
-        <Link href='/about' as='/about'><a>Get to know more!</a></Link>
+        <h2>
+          A <u>real</u> professional network<span>.</span><br/><br/>
+          For professionals looking to connect with people that they really know<span>.</span>
+        </h2>
+        <Link href='/about' as='/about'><a className="action">Get to know more!</a></Link>
       </div>
     </Wrapper>
   </Page>

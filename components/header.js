@@ -21,7 +21,6 @@ const Header = styled.header`
     margin-left: auto;
     a {
       font-weight: 600;
-      text-decoration: none;
       color: #6A38BB;
     }
   }
