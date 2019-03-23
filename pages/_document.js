@@ -205,6 +205,19 @@ export default class MyDocument extends Document {
     return { ...page, styleTags };
   }
 
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(registration => {
+          console.log('service worker registration successful')
+        })
+        .catch(err => {
+          console.warn('service worker registration failed', err.message)
+        })
+    }
+  }
+
   render() {
     return (
       <Html>
@@ -214,11 +227,10 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet" />
           <link rel="stylesheet" href="/static/fonts/style.css" />
-
           <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png?v=BG7Y3nlxmk" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png?v=BG7Y3nlxmk" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png?v=BG7Y3nlxmk" />
-          <link rel="manifest" href="/static/site.webmanifest?v=BG7Y3nlxmk" />
+          <link rel="manifest" href="/static/manifest.webmanifest?v=BG7Y3nlxmk" />
           <link rel="mask-icon" href="/static/safari-pinned-tab.svg?v=BG7Y3nlxmk" color="#6a38bb" />
           <link rel="shortcut icon" href="/static/favicon.ico?v=BG7Y3nlxmk" />
           <meta name="apple-mobile-web-app-title" content="The Card Network" />
@@ -226,7 +238,6 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="/static/browserconfig.xml?v=BG7Y3nlxmk" />
           <meta name="theme-color" content="#ffffff" />
-
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>
@@ -235,6 +246,7 @@ export default class MyDocument extends Document {
         </Main>
           <NextScript />
         </body>
+
       </Html>
     );
   }

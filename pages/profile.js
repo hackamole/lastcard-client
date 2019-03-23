@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 
 import Spinner from '../components/spinner'
+import Page from '../layouts/main'
 
 const ProfileWrapper = styled.div`
   height: 100%;
@@ -35,10 +36,12 @@ export default class Profile extends React.Component {
 
   render() {
     return (
-      <ProfileWrapper>
-        {/* <DynamicProfileWithLoading user={this.props.user} /> */}
-        {/* <DynamicCardsWithLoading cards={this.props.cards} /> */}
-      </ProfileWrapper>
+      <Page showLogo showNav>
+        <ProfileWrapper>
+           <DynamicProfileWithLoading user={this.props.user} />
+           <DynamicCardsWithLoading cards={this.props.cards} />
+        </ProfileWrapper>
+      </Page>
     )
   }
 }

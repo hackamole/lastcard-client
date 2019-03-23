@@ -73,7 +73,7 @@ export default class CardList extends React.Component {
     const { cards } = this.props;
     return (
       <CardListWrapper>
-        {cards.map(card => (
+        {cards && cards.map(card => (
           <div key={card.id}>
             {this.renderCard(card)}
           </div>
