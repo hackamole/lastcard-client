@@ -50,7 +50,7 @@ const Profile = styled.section`
 export default ({user}) => (
   <Profile>
     <div>
-      <img src="/static/images/profile_m.png" alt="profile avatar"/>
+      <img src="/static/images/celso.png" alt="profile avatar"/>
     </div>
     <h1 className="name">{user.first_name} {user.last_name}</h1>
     <h2 className="title">{user.title || 'CEO'} @ {user.company || 'Bright Pixel'}</h2>
