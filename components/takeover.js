@@ -108,7 +108,6 @@ export default class Takeover extends React.Component {
 
         <div>
           <p>Please login to see card history and to be able to reset the card and enable super powers!!</p>
-          <p>Already logged in</p>
           <section>
             <button className="primary" onClick={ () => this.takeoverCard(this.props.cardId) }>
               takeover
