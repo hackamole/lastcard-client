@@ -1,6 +1,8 @@
 {
-    "name": "TCN",
+    "name": "The Card Network",
     "short_name": "TCN",
+    "description": "For professionals looking to connect with people that they really know.",
+    "start_url": "/?launcher=true&utm_source=homescreen",
     "icons": [
         {
             "src": "/static/android-chrome-192x192.png?v=BG7Y3nlxmk",
@@ -15,5 +17,5 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "fullscreen"
 }
