@@ -19,7 +19,7 @@ const Wrapper = styled.div`
       }
       
       h1 {
-        max-width: 260px;
+        max-width: 200px;
         margin-top: 3rem;
         
         @media (min-width: 475px) {
