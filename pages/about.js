@@ -12,11 +12,27 @@ const AboutWrapper = styled.div`
     padding: 0 10rem;
   }
   
-  h1 {
+  > h1 {
     padding: 0 2rem;
     
     @media (min-width: 475px) {
-      padding: 2rem 2rem 0;
+      padding: 0 2rem 0;
+    }
+  }
+  
+  > p {
+    padding: 0 2rem;
+    
+    @media (min-width: 475px) {
+      padding: 6rem 2rem 0;
+    }
+  }
+  
+  > h2 {
+    padding: 0 2rem;
+    
+    @media (min-width: 475px) {
+      padding: 0 2rem 0;
     }
   }
   
@@ -88,8 +104,12 @@ const Card = styled.article`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   
   span {
-    font-size: 64px;
+    font-size: 4rem;
     color: white;
+    
+    &.icon-infinite {
+      font-size: 6rem;
+    }
   }
 `
 
@@ -98,7 +118,10 @@ export default class About extends React.Component {
     return (
       <Page showLogo showNav showLogin>
         <AboutWrapper>
-          <h1>How to use</h1>
+          <p>tl:dr</p>
+          <h1>Invite only. Get a card!</h1>
+          <br/>
+          <h2>How to use</h2>
           <section>
             <div>
               <h2 className="mobile">Meet & Share</h2>
@@ -109,13 +132,7 @@ export default class About extends React.Component {
             </div>
             <div>
               <h2 className="laptop">Meet & Share</h2>
-              <p>
-                <span>
-                  Web Summit? Meetup? Beach Party? <br/>
-                </span>
-                <br/>
-                Had a nice talk with someone? Got a new awesome card and now don't know what to do with it?
-              </p>
+              <p>Had a nice talk with someone? Got a new awesome card and now don't know what to do with it?</p>
             </div>
           </section>
           <section>
@@ -123,18 +140,12 @@ export default class About extends React.Component {
               <h2 className="mobile">Scan & Takeover</h2>
               <Card>
                 <span className="icon-qrcode" />
-                <span className="icon-edit" />
+                <span className="icon-cool" />
               </Card>
             </div>
             <div>
               <h2 className="laptop">Scan & Takeover</h2>
-              <p>
-                <span>
-                  Scan it with your phone... it's just a QRCode (for now!) <br/>
-                </span>
-                <br/>
-                Now that you have access to the profile associated with the card, you can create your own profile and takeover the card, making it yours.
-              </p>
+              <p>Now that you have access to the profile associated with the card, you can create your own profile and takeover the card, making it yours.</p>
             </div>
           </section>
           <section>
@@ -147,13 +158,7 @@ export default class About extends React.Component {
             </div>
             <div>
               <h2 className="laptop">Repeat... Repeat...</h2>
-              <p>
-                <span>
-                  Conference? Job meeting? Just some social event? <br/>
-                </span>
-                <br/>
-                Meet with others and share like they did with you. Reuse that card and save some dolphins and kitties.
-              </p>
+              <p>Meet with others and share like they did with you. Reuse that card and save some dolphins and kitties.</p>
             </div>
           </section>
         </AboutWrapper>

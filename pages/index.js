@@ -13,14 +13,15 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     
     div.logo {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      
       @media (min-width: 475px) {
         margin-bottom: 3rem;
       }
       
       h1 {
         max-width: 200px;
-        margin-top: 3rem;
+        margin-top: 1.5rem;
         
         @media (min-width: 475px) {
           margin-top: 6rem;
