@@ -9,18 +9,22 @@ const Logo = styled.div`
   flex-wrap: wrap;
   
   h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;  
     padding-left: 22px;
     margin: 8px 0;
-  }
-  
-  img {
-    width: 100%;
+    
+    @media (min-width: 475px) {
+      font-size: 3rem;
+    }
   }
   
   svg {
-  
+    max-width: 68%;
+    
+    @media (min-width: 475px) {
+      width: 100%;
+    }
   }
 `
 

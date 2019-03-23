@@ -14,18 +14,29 @@ const Footer = styled.footer`
   
   nav {
     a {
-      margin-left: 3rem;
+      margin-left: .5rem;
+      font-size: 12px;
+      
+      @media (min-width: 475px) {
+        margin-left: 3rem;
+        font-size: 16px;
+      }
     }
   }
   
   div.copy {
     margin-left: auto;
+    font-size: 12px;
+      
+    @media (min-width: 475px) {
+      font-size: 16px;
+    }
   }
 `
 
 export default (props) => (
   <Footer>
-    {props.showNav && (
+    {props.nav && (
       <nav>
         <Link href='/' as='/'><a>home</a></Link>
         <Link href='/login' as='/login'><a>login</a></Link>

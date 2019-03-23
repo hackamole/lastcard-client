@@ -19,7 +19,7 @@ const Wrapper = styled.div`
       }
       
       h1 {
-        max-width: 260px;
+        max-width: 200px;
         margin-top: 3rem;
         
         @media (min-width: 475px) {
@@ -59,7 +59,7 @@ const Wrapper = styled.div`
 `
 
 export default () => (
-  <Page>
+  <Page showLogin>
     <Wrapper>
       <div className="hero">
         <Logo size="20rem" full />
