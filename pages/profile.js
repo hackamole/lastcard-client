@@ -1,7 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import styled from 'styled-components'
-import 'isomorphic-unfetch'
+import fetch from 'isomorphic-unfetch'
 
 import Spinner from '../components/spinner'
 

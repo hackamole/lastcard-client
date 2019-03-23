@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Router from "next/router";
 
 const TakeoverWrapper = styled.section`
   position: fixed;
@@ -91,11 +92,12 @@ export default class Takeover extends React.Component {
           <p>Please login to see card history and to be able to reset the card and enable super powers!!</p>
           <section>
             <button className="primary">
-              login with <span className="icon-github"></span>
+              takeover
+              {/* login with <span className="icon-github"></span> */}
             </button>
-            <button className="primary">
+            {/* <button className="primary">
               login with <span className="icon-linkedin"></span>
-            </button>
+            </button> */}
           </section>
         </div>
       </TakeoverWrapper>
