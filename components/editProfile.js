@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const EditProfileWrapper = styled.section`
-  position: fixed;
+  //position: fixed;
+  z-index: 1;
   bottom: 0;
   height: 100%;
   width: 100%;
@@ -11,7 +12,7 @@ const EditProfileWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  color: #787878;
+  color: white;
   
   div.edit-panel {
     position: fixed;
@@ -22,13 +23,14 @@ const EditProfileWrapper = styled.section`
     top: 40px;
     opacity: 0;
     border-radius: 50%;
+    padding-top: 10rem;
     transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     &.isExpanded {
       height: 100%;
       width: 100%;
       right: 0;
       top: 0;
-      background-color: #E8E8E8;
+      background: linear-gradient(60.15deg, #851299 0%, #7471FA 100%);
       opacity: 1;
       border-radius: 0;
     }
@@ -147,7 +149,7 @@ const EditProfileWrapper = styled.section`
       }
       span {
         font-size: 1.5rem;
-        color: #787878;
+        color: white;
       }
     }
   }
@@ -160,14 +162,14 @@ const EditProfileWrapper = styled.section`
   button.open {
     z-index: 1;
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     left: calc(100% - 4rem);
     margin: 0;
     padding: 0;
     outline: none;
     transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     &.isExpanded {
-      top: 4rem;
+      top: 10rem;
       left: 2rem;
       img {
         width: 6rem;
