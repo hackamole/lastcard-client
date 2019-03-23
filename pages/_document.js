@@ -205,6 +205,15 @@ export default class MyDocument extends Document {
     return { ...page, styleTags };
   }
 
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator
+        .serviceWorker.register('service-worker.js')
+        .then(function(reg) {console.log("Yes, it did.")} )
+        .catch(function(err) {console.log("No it didn't. This happened: ", err)})
+    }
+  }
+
   render() {
     return (
       <Html>
@@ -226,7 +235,6 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="/static/browserconfig.xml?v=BG7Y3nlxmk" />
           <meta name="theme-color" content="#ffffff" />
-
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>
@@ -235,6 +243,7 @@ export default class MyDocument extends Document {
         </Main>
           <NextScript />
         </body>
+
       </Html>
     );
   }
