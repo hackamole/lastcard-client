@@ -235,7 +235,7 @@ export default class EditProfile extends React.Component {
             <span className="icon-cross" />
           </button>
           <div className={isExpanded ? 'isExpanded' : ''}>
-            <h1 className="name">{user && user.first_name} {user && user.last_name}</h1>
+            <h1 className="name">Miguel Carvaho</h1>
             {/*<h2 className="title">{user && user.title} @ {user && user.company}</h2>*/}
             <p className="contacts">
               <span>{user && user.email}</span>

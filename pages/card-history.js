@@ -335,53 +335,79 @@ export default class Card extends React.Component {
       <CardWrapper>
         <h1>Card History</h1>
         <div>[{this.props.url.query.id}]</div>
-        <ul class="timeline">
-					<li>
-						<div className="direction-l">
-							<div className="flag-wrapper">
-								<p className="flag">Celso Martinho</p>
-								<span className="time-wrapper">
+				{this.props.url.query.id === '90695cbb-cf43-4fbc-bf12-74c8cec2b4ab' && (
+					<ul className="timeline">
+						<li>
+							<div className="direction-l">
+								<div className="flag-wrapper">
+									<p className="flag">Sofia Cardita</p>
+									<span className="time-wrapper">
                   <span className="time">21-04-2019</span>
 								</span>
+								</div>
 							</div>
-						</div>
-					</li>
-					<li>
+						</li>
+						<li>
+							<div className="direction-r">
+								<div className="flag-wrapper active">
+									<span className="flag">You</span>
+									<span className="time-wrapper"><span className="time">21-04-2019</span></span>
+								</div>
+							</div>
+						</li>
+
+
+						<li>
 						<div class="direction-r">
-							<div class="flag-wrapper active">
-								<span class="flag">You</span>
-								<span class="time-wrapper"><span class="time">21-04-2019</span></span>
-							</div>
+						<div class="flag-wrapper">
+						<span class="flag">Telmo Rodrigues</span>
+						<span class="time-wrapper"><span class="time">22-04-2019</span></span>
 						</div>
-					</li>
+						</div>
+						</li>
 
-					{/*<li>*/}
-						{/*<div class="direction-r">*/}
-							{/*<div class="flag-wrapper">*/}
-								{/*<span class="flag">Telmo Rodrigues</span>*/}
-								{/*<span class="time-wrapper"><span class="time">22-04-2019</span></span>*/}
-							{/*</div>*/}
-						{/*</div>*/}
-					{/*</li>*/}
+						<li>
+						<div className="direction-r">
+						<div className="flag-wrapper">
+						<span className="flag">Anton Lazarenko</span>
+						<span className="time-wrapper"><span className="time">23-04-2019</span></span>
+						</div>
+						</div>
+						</li>
 
-					{/*<li>*/}
-						{/*<div className="direction-r">*/}
-							{/*<div className="flag-wrapper">*/}
-								{/*<span className="flag">Anton Lazarenko</span>*/}
-								{/*<span className="time-wrapper"><span className="time">23-04-2019</span></span>*/}
-							{/*</div>*/}
-						{/*</div>*/}
-					{/*</li>*/}
+						<li>
+						<div className="direction-r">
+						<div className="flag-wrapper">
+						<span className="flag">Lucas Santos</span>
+						<span className="time-wrapper"><span className="time">23-04-2019</span></span>
+						</div>
+						</div>
+						</li>
+					</ul>
+				)}
 
-					{/*<li>*/}
-						{/*<div className="direction-r">*/}
-							{/*<div className="flag-wrapper">*/}
-								{/*<span className="flag">Lucas Santos</span>*/}
-								{/*<span className="time-wrapper"><span className="time">23-04-2019</span></span>*/}
-							{/*</div>*/}
-						{/*</div>*/}
-					{/*</li>*/}
-				</ul>
+				{this.props.url.query.id !== '90695cbb-cf43-4fbc-bf12-74c8cec2b4ab' && (
+					<ul className="timeline">
+						<li>
+							<div className="direction-l">
+								<div className="flag-wrapper">
+									<p className="flag">Celso Martinho</p>
+									<span className="time-wrapper">
+                  <span className="time">21-04-2019</span>
+								</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div className="direction-r">
+								<div className="flag-wrapper active">
+									<span className="flag">You</span>
+									<span className="time-wrapper"><span className="time">21-04-2019</span></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				)}
       </CardWrapper>
       </Page>
     )

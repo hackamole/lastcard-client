@@ -40,24 +40,24 @@ const Card = styled.article`
 `
 
 export default class CardList extends React.Component {
-  static async getInitialProps () {
-    // for each card get userdetails
-    // const { cards } = this.props;
+  // static async getInitialProps () {
+  //   // for each card get userdetails
+  //   // const { cards } = this.props;
+  //
+  //   // eslint-disable-next-line no-undef
+  //   // const res = await fetch(api.cards)
+  //   // const json = await res.json()
+  //   // return { user: json.stargazers_count }
+  //   // return { cards: cards, users: {
+  //   //     [cards[0].id]: {
+  //   //
+  //   //     }
+  //   //   }}
+  // }
 
-    // eslint-disable-next-line no-undef
-    // const res = await fetch(api.cards)
-    // const json = await res.json()
-    // return { user: json.stargazers_count }
-    return { cards: cards, users: {
-        [cards[0].id]: {
-
-        }
-      }}
-  }
-
-  state = {
-    cards: {},
-  }
+  // state = {
+  //   cards: {},
+  // }
 
   renderCard (card) {
       // id: 1234,
@@ -72,7 +72,7 @@ export default class CardList extends React.Component {
         <header>{card.id}</header>
         <div>
           <span>passed by: </span>
-          <h3>{card.previousUser.first_name} {card.current_user.last_name}</h3>
+          <h3>{card.previousUser.first_name} {card.previousUser.last_name}</h3>
         </div>
       </Card>
     )

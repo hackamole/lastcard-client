@@ -35,7 +35,7 @@ export default class Profile extends React.Component {
     return {
       cards: [
         {
-          id: 1,
+          id: '810cdeb7-b151-45d5-9294-022f4e0d8ad7',
           original_user: 1,
           url: 'url',
           qr_code_url: 'url',
@@ -75,7 +75,7 @@ export default class Profile extends React.Component {
           },
       },
         {
-          id: 2,
+          id: '90695cbb-cf43-4fbc-bf12-74c8cec2b4ab',
           original_user: 2,
           url: 'url',
           qr_code_url: 'url',
@@ -99,8 +99,8 @@ export default class Profile extends React.Component {
           },
           previousUser: {
             id: 2,
-            first_name: 'João',
-            last_name: 'Sil',
+            first_name: 'Sofia',
+            last_name: 'Cardita',
             mobile: '912 345 678',
             email: 'you@example.com',
             address: {
