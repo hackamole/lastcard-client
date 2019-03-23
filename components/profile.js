@@ -51,7 +51,7 @@ export default ({user}) => (
     <div>
       <img src="/static/images/profile_m.png" alt="profile avatar"/>
     </div>
-    <h1 className="name">{user.first_name} {user.last_name}</h1>
+    <h1 className="name">{user.first_name || 'Celso'} {user.last_name || 'Martins'}</h1>
     <h2 className="title">{user.title || 'UFO'} @ {user.company || 'Rainbows factory'}</h2>
     <p className="contacts">
       <span>{user.email}</span>

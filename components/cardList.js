@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Router from 'next/router'
 
 const CardListWrapper = styled.section`
   padding: 8rem 2rem 2rem;
@@ -60,7 +61,7 @@ export default class CardList extends React.Component {
       // modified_at: 'timestamp',
       // current_user: null
     return (
-      <Card>
+      <Card onClick={() => Router.push('/card/ec113dbe-c8a0-4b33-a27d-f2ef3f54016c/history')}>
         <header>{card.id}</header>
         <div>
           <h3>{card.original_user}</h3>

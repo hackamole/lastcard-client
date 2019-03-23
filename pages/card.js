@@ -20,17 +20,17 @@ const CardWrapper = styled.div`
 const DynamicComponentWithLoading = dynamic(() => import('../components/profile'), {
   loading: () => <Spinner />
 })
-
+const cookies = new Cookies();
 export default class Card extends React.Component {
   static async getInitialProps({ query }) {
     console.log('DEBUG', query);
-    console.log('DEBUG', Cookies.get('last-card-auth'));
+    console.log('DEBUG', cookies.get('last-card-auth'));
     
     // eslint-disable-next-line no-undef
     const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`,
     {
       headers: {
-        'Authorization': `Token ${Cookies.get('last-card-auth')}`,
+        'Authorization': `Token ${cookies.get('last-card-auth')}`,
       },
     });
     const card = await cardRes.json();
