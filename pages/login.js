@@ -65,7 +65,7 @@ export default ({user}) => (
       <p className="contacts">
         <input placeholder="login" />
         <input placeholder="password" />
-        <button className="primary" onClick={() => {Router.push('/profile')}}>
+        <button className="primary" disabled onClick={() => {Router.push('/profile')}}>
           Login
         </button>
       </p>
