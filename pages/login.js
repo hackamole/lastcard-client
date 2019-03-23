@@ -89,7 +89,7 @@ handleSubmit = evt => {
       })
     })
     .then(response => response.json())
-    .then(data => cookies.set('last-card-auth', data.token))
+    .then(data => cookies.set('last-card-auth', data.token))  
     .catch(error => console.log(error))
   }
 
@@ -127,11 +127,6 @@ export default ({user}) => (
       <h1 className="name">Login</h1>
       <p className="contacts">
         <LoginForm />
-        {/* <input placeholder="login" />
-        <input placeholder="password" />
-        <button className="primary" onClick={() => {Router.push('/profile')}}>
-          Login
-        </button> */}
       </p>
     </Login>
   </Page>
