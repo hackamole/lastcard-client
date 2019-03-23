@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import Router from 'next/router';
+// import Router from 'next/router';
 import fetch from 'isomorphic-unfetch'
-import Cookies from 'universal-cookie';
+import Cookies from 'universal-cookie'
 
 import Page from '../layouts/main'
+
 const cookies = new Cookies();
+
 const Login = styled.section`
   height: calc(100% - 8rem);
   width: calc(100% - 4rem);
@@ -47,7 +49,7 @@ const Login = styled.section`
         margin-left: .4rem;
       }
     }
-  }  
+  }
   input {
     line-height: 2rem;
     border: 1px solid #ccc;
@@ -82,7 +84,7 @@ handleSubmit = evt => {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-      }, 
+      },
       body: JSON.stringify({
           username:this.state.username,
           password:this.state.password,
@@ -96,20 +98,20 @@ handleSubmit = evt => {
 render(){
   return(
     <form onSubmit={this.handleSubmit} >
-        <input 
-            name="username" 
-            type="text" 
-            id="username" 
+        <input
+            name="username"
+            type="text"
+            id="username"
             placeholder="username"
-            value={this.state.username} 
+            value={this.state.username}
             onChange={this.handleChange}>
         </input>
-        <input 
-            name="password" 
-            type="password" 
-            id="password" 
+        <input
+            name="password"
+            type="password"
+            id="password"
             placeholder="password"
-            value={this.state.password} 
+            value={this.state.password}
             onChange={this.handleChange}>
         </input>
         <input type="submit" className="primary" />
