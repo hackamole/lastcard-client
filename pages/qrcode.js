@@ -20,6 +20,10 @@ const Card = styled.article`
   justify-content: center;
   color: #787878;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  
+  img {
+    width: 50%;
+  }
 `
 
 export default class Qrcode extends React.Component {
@@ -27,7 +31,7 @@ export default class Qrcode extends React.Component {
     return (
       <QrcodeWrapper>
         <Card>
-          qrcode
+          <img src="http://lastcard.sytes.net/qrcodes/90695cbb-cf43-4fbc-bf12-74c8cec2b4ab.svg" alt=""/>
         </Card>
       </QrcodeWrapper>
     )
