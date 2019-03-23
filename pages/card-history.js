@@ -86,8 +86,12 @@ const CardWrapper = styled.div`
 .flag-wrapper {
   position: relative;
   display: inline-block;
-  
   text-align: center;
+  
+  &.active {
+  	background-color: #6A38BB;
+  	//color: white;
+  }
 }
 
 .flag {
@@ -102,15 +106,15 @@ const CardWrapper = styled.div`
 }
 
 .direction-l .flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  //-webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  //-moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  //box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
 }
 
 .direction-r .flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  //-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  //-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  //box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
 }
 
 .direction-l .flag:before,
@@ -123,9 +127,6 @@ const CardWrapper = styled.div`
   width: 12px;
   height: 12px;
   margin-top: -10px;
-  background: #fff;
-  border-radius: 10px;
-  border: 4px solid rgb(255,80,80);
   z-index: 10;
 }
 
@@ -166,7 +167,7 @@ const CardWrapper = styled.div`
   
   line-height: 1em;
   font-size: 0.66666em;
-  color: rgb(250,80,80);
+  color: #6A38BB;
   vertical-align: middle;
 }
 
@@ -181,7 +182,7 @@ const CardWrapper = styled.div`
 .time {
   display: inline-block;
   padding: 4px 6px;
-  background: rgb(248,248,248);
+  background: transparent;
 }
 
 .desc {
@@ -218,7 +219,13 @@ const CardWrapper = styled.div`
 }
 
 .flag-wrapper {
+	z-index: 20;
 	text-align: center;
+	background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	box-shadow: 0 0 1px rgba(0,0,0,0.20);
 }
 
 .flag {
@@ -238,7 +245,7 @@ const CardWrapper = styled.div`
 	margin-left: -9px;
 	background: #fff;
 	border-radius: 10px;
-	border: 4px solid rgb(255,80,80);
+	border: 4px solid #6A38BB;
 	z-index: 10;
 }
 
@@ -312,7 +319,7 @@ const CardWrapper = styled.div`
 export default class Card extends React.Component {
   static async getInitialProps({ query }) {
     console.log('DEBUG', query);
-    
+
     // eslint-disable-next-line no-undef
     // const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`);
     // const card = await cardRes.json();
@@ -328,38 +335,52 @@ export default class Card extends React.Component {
         <h1>Card History</h1>
         <div>[{this.props.url.query.id}]</div>
         <ul class="timeline">
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">You</span>
-				<span class="time-wrapper"><span class="time">23-04-2019</span></span>
-			</div>
-			{/* <div class="desc">My current employment. Way better than the position before!</div> */}
-		</div>
-	</li>
+					<li>
+						<div className="direction-l">
+							<div className="flag-wrapper">
+								<p className="flag">Sofia Cardita</p>
+								<span className="time-wrapper">
+                  <span className="time">21-04-2019</span>
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="direction-r">
+							<div class="flag-wrapper active">
+								<span class="flag">You</span>
+								<span class="time-wrapper"><span class="time">21-04-2019</span></span>
+							</div>
+						</div>
+					</li>
 
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">Miguel Carvalho</span>
-				<span class="time-wrapper"><span class="time">21-04-2019</span></span>
-			</div>
-			{/* <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div> */}
-		</div>
-	</li>
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">Telmo Rodrigues</span>
-				<span class="time-wrapper"><span class="time">20-04-2019</span></span>
-			</div>
-			{/* <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div> */}
-		</div>
-	</li>
-  
-</ul>
-        {/* <DynamicComponentWithLoading user={this.props.user} /> */}
-        {/* <Takeover /> */}
+					<li>
+						<div class="direction-r">
+							<div class="flag-wrapper">
+								<span class="flag">Telmo Rodrigues</span>
+								<span class="time-wrapper"><span class="time">22-04-2019</span></span>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div className="direction-r">
+							<div className="flag-wrapper">
+								<span className="flag">Anton Lazarenko</span>
+								<span className="time-wrapper"><span className="time">23-04-2019</span></span>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div className="direction-r">
+							<div className="flag-wrapper">
+								<span className="flag">Lucas Santos</span>
+								<span className="time-wrapper"><span className="time">23-04-2019</span></span>
+							</div>
+						</div>
+					</li>
+				</ul>
       </CardWrapper>
       </Page>
     )
