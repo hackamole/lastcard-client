@@ -26,6 +26,7 @@ const TakeoverWrapper = styled.section`
     height: 64px;
     margin: 0;
     padding: 0;
+    border: none;
     background-color: #6A38BB;
     color: white;
     outline: none;
@@ -51,7 +52,6 @@ const TakeoverWrapper = styled.section`
         justify-content: center;
         align-items: center;
         background: white;
-        color: white;
         font-size: 1.2rem;
         margin-bottom: 1rem;
         color: #6A38BB;
