@@ -96,7 +96,7 @@ const Card = styled.article`
 export default class About extends React.Component {
   render() {
     return (
-      <Page showLogo showNav>
+      <Page showLogo showNav showLogin>
         <AboutWrapper>
           <h1>How to use</h1>
           <section>

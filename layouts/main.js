@@ -5,6 +5,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 const Main = styled.div`
+  width: 100%;
   max-width: 75rem;
   margin: 0 auto;
   min-height: 100%;
@@ -13,8 +14,8 @@ const Main = styled.div`
 
 export default (props) => (
   <Main>
-    <Header logo={props.showLogo} />
+    <Header logo={props.showLogo} login={props.showLogin} />
       {props.children}
-    <Footer logo={props.showNav} />
+    <Footer nav={props.showNav}/>
   </Main>
 )

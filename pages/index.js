@@ -59,7 +59,7 @@ const Wrapper = styled.div`
 `
 
 export default () => (
-  <Page>
+  <Page showLogin>
     <Wrapper>
       <div className="hero">
         <Logo size="20rem" full />

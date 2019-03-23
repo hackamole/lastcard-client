@@ -31,8 +31,10 @@ export default (props) => (
     {props.logo && (
       <Link href='/' as='/'><a><Logo /></a></Link>
     )}
-    <nav>
-      <Link href='/login' as='/login'><a>login</a></Link>
-    </nav>
+    {props.login && (
+      <nav>
+        <Link href='/login' as='/login'><a>login</a></Link>
+      </nav>
+    )}
   </Header>
 )
