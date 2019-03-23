@@ -35,6 +35,11 @@ const Login = styled.section`
     > span {
       margin: .25rem;
     }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
     input.primary,
     input.secundary {
       height: 3rem;
