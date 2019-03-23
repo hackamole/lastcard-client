@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 const Footer = styled.footer`
-  position: absolute;
+  position: relative;
   bottom: 1rem;
   width: calc(100% - 4rem);
   display: flex;

@@ -121,7 +121,7 @@ export default class Profile extends React.Component {
     return (
       <Page showLogo showNav>
         <ProfileWrapper>
-           <DynamicProfileWithLoading user={this.props.cards.current_user} />
+           <DynamicProfileWithLoading user={this.props.cards[0].current_user} />
            <DynamicCardsWithLoading cards={this.props.cards} />
         </ProfileWrapper>
       </Page>

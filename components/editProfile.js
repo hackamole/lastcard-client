@@ -6,6 +6,8 @@ const EditProfileWrapper = styled.section`
   bottom: 0;
   height: 100%;
   width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -189,8 +191,8 @@ export default class EditProfile extends React.Component {
   state = {
     hasChanges: false,
     isExpanded: false,
-    linkedin: this.props.user && this.props.user.links.linkedin || 'linkedin-url-here',
-    github: this.props.user && this.props.user.links.github || 'github-url-here',
+    linkedin: '',
+    github: '',
   }
 
   onChange = (e, name) => {
@@ -231,11 +233,11 @@ export default class EditProfile extends React.Component {
             <span className="icon-cross" />
           </button>
           <div className={isExpanded ? 'isExpanded' : ''}>
-            <h1 className="name">{user && user.name}</h1>
-            <h2 className="title">{user && user.title} @ {user && user.company}</h2>
+            <h1 className="name">{user && user.first_name} {user && user.last_name}</h1>
+            {/*<h2 className="title">{user && user.title} @ {user && user.company}</h2>*/}
             <p className="contacts">
-              <span>{user && user.contacts.email}</span>
-              <span>{user && user.contacts.phone}</span>
+              <span>{user && user.email}</span>
+              <span>{user && user.mobile}</span>
             </p>
             <section>
               <ul>
