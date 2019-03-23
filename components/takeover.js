@@ -11,11 +11,11 @@ const TakeoverWrapper = styled.section`
   bottom: 0;
   height: 64px;
   width: 100%;
-  background-color: #E8E8E8;
+  background-color: #6A38BB;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  color: #797979;
+  color: white;
   transition: height 500ms cubic-bezier(0.19, 1, 0.22, 1);
   
   &.isExpanded {
@@ -30,8 +30,9 @@ const TakeoverWrapper = styled.section`
     height: 64px;
     margin: 0;
     padding: 0;
-    background-color: #E8E8E8;
-    color: #797979;
+    border: none;
+    background-color: #6A38BB;
+    color: white;
     outline: none;
   }
   
@@ -54,10 +55,10 @@ const TakeoverWrapper = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #797979;
-        color: white;
+        background: white;
         font-size: 1.2rem;
         margin-bottom: 1rem;
+        color: #6A38BB;
         
         span {
           margin-left: .4rem;
@@ -100,11 +101,12 @@ export default class Takeover extends React.Component {
     return (
       <TakeoverWrapper className={isExpanded ? 'isExpanded' : ''}>
         <button className="toggle" onClick={this.togglePanel}>
-          {isExpanded ? 'back to profile' : 'take over this card'}
+          {isExpanded ? 'back to card' : 'take over this card'}
         </button>
 
         <div>
           <p>Please login to see card history and to be able to reset the card and enable super powers!!</p>
+          <p>Already logged in</p>
           <section>
             <button className="primary" onClick={ () => this.takeoverCard(this.props.cardId) }>
               takeover
