@@ -218,7 +218,7 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png?v=BG7Y3nlxmk" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png?v=BG7Y3nlxmk" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png?v=BG7Y3nlxmk" />
-          <link rel="manifest" href="/static/site.webmanifest?v=BG7Y3nlxmk" />
+          <link rel="manifest" href="/static/manifest.json?v=BG7Y3nlxmk" />
           <link rel="mask-icon" href="/static/safari-pinned-tab.svg?v=BG7Y3nlxmk" color="#6a38bb" />
           <link rel="shortcut icon" href="/static/favicon.ico?v=BG7Y3nlxmk" />
           <meta name="apple-mobile-web-app-title" content="The Card Network" />
