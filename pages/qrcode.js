@@ -31,7 +31,7 @@ export default class Qrcode extends React.Component {
     return (
       <QrcodeWrapper>
         <Card>
-          <img src="http://lastcard.sytes.net/qrcodes/90695cbb-cf43-4fbc-bf12-74c8cec2b4ab.svg" alt=""/>
+          <img src="http://lastcard.sytes.net/qrcodes/810cdeb7-b151-45d5-9294-022f4e0d8ad7.svg" alt=""/>
         </Card>
       </QrcodeWrapper>
     )

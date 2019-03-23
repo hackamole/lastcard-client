@@ -42,12 +42,12 @@ const Card = styled.article`
 export default class CardList extends React.Component {
   static async getInitialProps () {
     // for each card get userdetails
-    const { cards } = this.props;
+    // const { cards } = this.props;
 
     // eslint-disable-next-line no-undef
-    const res = await fetch(api.cards)
-    const json = await res.json()
-    return { user: json.stargazers_count }
+    // const res = await fetch(api.cards)
+    // const json = await res.json()
+    // return { user: json.stargazers_count }
     return { cards: cards, users: {
         [cards[0].id]: {
 
@@ -68,7 +68,7 @@ export default class CardList extends React.Component {
       // modified_at: 'timestamp',
       // current_user: null
     return (
-      <Card onClick={() => Router.push('/card/ec113dbe-c8a0-4b33-a27d-f2ef3f54016c/history')}>
+      <Card onClick={() => Router.push(`/card/${card.id}/history`)}>
         <header>{card.id}</header>
         <div>
           <span>passed by: </span>

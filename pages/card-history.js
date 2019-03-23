@@ -10,6 +10,7 @@ import Router from 'next/router';
 
 
 const CardWrapper = styled.div`
+	min-height: 80%;
   height: 100%;
   width: 100%;
   display: flex;
@@ -89,7 +90,7 @@ const CardWrapper = styled.div`
   text-align: center;
   
   &.active {
-  	background-color: #6A38BB;
+  	//background-color: #6A38BB;
   	//color: white;
   }
 }
@@ -321,10 +322,10 @@ export default class Card extends React.Component {
     console.log('DEBUG', query);
 
     // eslint-disable-next-line no-undef
-    const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`);
-    const card = await cardRes.json();
-
-    return { user: card.current_user }
+    // const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`);
+    // const card = await cardRes.json();
+		//
+    // return { user: card.current_user }
     return {};
   }
 
@@ -338,7 +339,7 @@ export default class Card extends React.Component {
 					<li>
 						<div className="direction-l">
 							<div className="flag-wrapper">
-								<p className="flag">Sofia Cardita</p>
+								<p className="flag">Celso Martinho</p>
 								<span className="time-wrapper">
                   <span className="time">21-04-2019</span>
 								</span>
@@ -354,32 +355,32 @@ export default class Card extends React.Component {
 						</div>
 					</li>
 
-					<li>
-						<div class="direction-r">
-							<div class="flag-wrapper">
-								<span class="flag">Telmo Rodrigues</span>
-								<span class="time-wrapper"><span class="time">22-04-2019</span></span>
-							</div>
-						</div>
-					</li>
+					{/*<li>*/}
+						{/*<div class="direction-r">*/}
+							{/*<div class="flag-wrapper">*/}
+								{/*<span class="flag">Telmo Rodrigues</span>*/}
+								{/*<span class="time-wrapper"><span class="time">22-04-2019</span></span>*/}
+							{/*</div>*/}
+						{/*</div>*/}
+					{/*</li>*/}
 
-					<li>
-						<div className="direction-r">
-							<div className="flag-wrapper">
-								<span className="flag">Anton Lazarenko</span>
-								<span className="time-wrapper"><span className="time">23-04-2019</span></span>
-							</div>
-						</div>
-					</li>
+					{/*<li>*/}
+						{/*<div className="direction-r">*/}
+							{/*<div className="flag-wrapper">*/}
+								{/*<span className="flag">Anton Lazarenko</span>*/}
+								{/*<span className="time-wrapper"><span className="time">23-04-2019</span></span>*/}
+							{/*</div>*/}
+						{/*</div>*/}
+					{/*</li>*/}
 
-					<li>
-						<div className="direction-r">
-							<div className="flag-wrapper">
-								<span className="flag">Lucas Santos</span>
-								<span className="time-wrapper"><span className="time">23-04-2019</span></span>
-							</div>
-						</div>
-					</li>
+					{/*<li>*/}
+						{/*<div className="direction-r">*/}
+							{/*<div className="flag-wrapper">*/}
+								{/*<span className="flag">Lucas Santos</span>*/}
+								{/*<span className="time-wrapper"><span className="time">23-04-2019</span></span>*/}
+							{/*</div>*/}
+						{/*</div>*/}
+					{/*</li>*/}
 				</ul>
       </CardWrapper>
       </Page>

@@ -75,6 +75,7 @@ export default class Takeover extends React.Component {
     // const res = await fetch(api.cards)
     // const json = await res.json()
     // return { user: json.stargazers_count }
+    Router.push(`/profile`);
   }
 
   state = {
@@ -86,14 +87,15 @@ export default class Takeover extends React.Component {
   }
 
   takeoverCard = (cardId) => {
-    fetch(`http://localhost:8000/cards/${cardId}/takeover/`,
-    {
-      method: 'POST',
-        headers: {
-        'Authorization': `Token ${cookie.get('last-card-auth')}`,
-      },
-    })
-    this.setState(prevState => ({isExpanded: !prevState.isExpanded}))
+    // fetch(`http://localhost:8000/cards/${cardId}/takeover/`,
+    // {
+    //   method: 'POST',
+    //     headers: {
+    //     'Authorization': `Token ${cookie.get('last-card-auth')}`,
+    //   },
+    // })
+    // this.setState(prevState => ({isExpanded: !prevState.isExpanded}))
+    Router.push(`/profile`);
   }
 
   render () {
