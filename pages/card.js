@@ -62,7 +62,7 @@ export default class Card extends React.Component {
     return (
       <CardWrapper>
         <DynamicComponentWithLoading user={this.props.user} />
-        <Takeover />
+        <Takeover cardId={this.props.url.query.id} />
       </CardWrapper>
     )
   }

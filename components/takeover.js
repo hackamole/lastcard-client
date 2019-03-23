@@ -4,6 +4,8 @@ import Router from "next/router";
 import fetch from 'isomorphic-unfetch'
 import Cookies from 'universal-cookie'
 
+const cookie = new Cookies();
+
 const TakeoverWrapper = styled.section`
   position: fixed;
   bottom: 0;
@@ -83,9 +85,12 @@ export default class Takeover extends React.Component {
   }
 
   takeoverCard = (cardId) => {
-    fetch(`card/${cardId}/takeover`,
+    fetch(`http://localhost:8000/cards/${cardId}/takeover/`,
     {
-      method: 'POST'
+      method: 'POST',
+        headers: {
+        'Authorization': `Token ${cookie.get('last-card-auth')}`,
+      },
     })
     this.setState(prevState => ({isExpanded: !prevState.isExpanded}))
   }
@@ -101,7 +106,7 @@ export default class Takeover extends React.Component {
         <div>
           <p>Please login to see card history and to be able to reset the card and enable super powers!!</p>
           <section>
-            <button className="primary" onClick={ () => this.takeoverCard(cardId) }>
+            <button className="primary" onClick={ () => this.takeoverCard(this.props.cardId) }>
               takeover
               {/* login with <span className="icon-github"></span> */}
             </button>
