@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import Router from 'next/router';
+import Router from 'next/router';
 import fetch from 'isomorphic-unfetch'
 import Cookies from 'universal-cookie'
 
@@ -96,8 +96,11 @@ handleSubmit = evt => {
       })
     })
     .then(response => response.json())
-    .then(data => cookies.set('last-card-auth', data.token))  
-    .catch(error => console.log(error))
+    .then((data) => {
+      cookies.set('last-card-auth', data.token);
+      Router.push('/profile');
+    })
+    .catch(error => console.log(error));
   }
 
 render(){
