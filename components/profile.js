@@ -53,7 +53,7 @@ export default ({user}) => (
       <img src="/static/images/celso.png" alt="profile avatar"/>
     </div>
     <h1 className="name">{user.first_name || 'Celso'} {user.last_name || 'Martins'}</h1>
-    <h2 className="title">{user.title || 'UFO'} @ {user.company || 'Rainbows factory'}</h2>
+    <h2 className="title">{user.title || 'CEO'} @ {user.company || 'Bright Pixel'}</h2>
     <p className="contacts">
       <span>{user.email}</span>
       <span>{user.mobile}</span>

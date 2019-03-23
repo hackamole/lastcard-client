@@ -321,10 +321,10 @@ export default class Card extends React.Component {
     console.log('DEBUG', query);
 
     // eslint-disable-next-line no-undef
-    // const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`);
-    // const card = await cardRes.json();
+    const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`);
+    const card = await cardRes.json();
 
-    // return { user: card.current_user }
+    return { user: card.current_user }
     return {};
   }
 

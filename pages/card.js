@@ -25,11 +25,11 @@ export default class Card extends React.Component {
   static async getInitialProps({ query }) {
     const cookies = new Cookies();
 
-    console.log('DEBUG', query);
-    console.log('DEBUG', cookies);
+    // console.log('DEBUG', query);
+    // console.log('DEBUG', cookies);
     // console.log('DEBUG', cookies.get('last-card-auth'));
-
-    // eslint-disable-next-line no-undef
+    //
+    // // eslint-disable-next-line no-undef
     // const cardRes = await fetch(`http://lastcard.sytes.net/cards/${query.id}`,
     // {
     //   headers: {
@@ -39,6 +39,90 @@ export default class Card extends React.Component {
     // const card = await cardRes.json();
     //
     // return { user: card.current_user }
+    return {
+      cards: [
+        {
+          id: 1,
+          original_user: 1,
+          url: 'url',
+          qr_code_url: 'url',
+          created_at: 'timestamp',
+          modified_at: 'timestamp',
+          current_user: {
+            id: 1,
+            first_name: 'Celso',
+            last_name: 'Martinho',
+            mobile: '912 345 678',
+            email: 'you@example.com',
+            address: {
+              street: 'string',
+              postcode: 'string',
+              city: 'string',
+              country: 'string',
+            },
+            birthday: 'date',
+            url: 'url',
+            social_profile: 'url'
+          },
+          previousUser: {
+            id: 1,
+            first_name: 'Celso',
+            last_name: 'Martinho',
+            mobile: '912 345 678',
+            email: 'you@example.com',
+            address: {
+              street: 'string',
+              postcode: 'string',
+              city: 'string',
+              country: 'string',
+            },
+            birthday: 'date',
+            url: 'url',
+            social_profile: 'url'
+          },
+        },
+        {
+          id: 2,
+          original_user: 2,
+          url: 'url',
+          qr_code_url: 'url',
+          created_at: 'timestamp',
+          modified_at: 'timestamp',
+          current_user: {
+            id: 1,
+            first_name: 'Celso',
+            last_name: 'Martinho',
+            mobile: '912 345 678',
+            email: 'you@example.com',
+            address: {
+              street: 'string',
+              postcode: 'string',
+              city: 'string',
+              country: 'string',
+            },
+            birthday: 'date',
+            url: 'url',
+            social_profile: 'url'
+          },
+          previousUser: {
+            id: 2,
+            first_name: 'João',
+            last_name: 'Sil',
+            mobile: '912 345 678',
+            email: 'you@example.com',
+            address: {
+              street: 'string',
+              postcode: 'string',
+              city: 'string',
+              country: 'string',
+            },
+            birthday: 'date',
+            url: 'url',
+            social_profile: 'url'
+          },
+        },
+      ]
+    };
   }
 
   render () {
@@ -47,7 +131,7 @@ export default class Card extends React.Component {
     console.log('y');
     return (
       <CardWrapper>
-        <DynamicComponentWithLoading user={this.props.user} />
+        <DynamicComponentWithLoading user={this.props.cards[0].current_user} />
         <Takeover cardId={this.props.url.query.id} />
       </CardWrapper>
     )

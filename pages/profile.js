@@ -25,12 +25,13 @@ const DynamicCardsWithLoading = dynamic(() => import('../components/cardList'), 
 export default class Profile extends React.Component {
   static async getInitialProps() {
     // eslint-disable-next-line no-undef
-    // const cardsRes = await fetch('http://localhost:8000/cards/');
+    // const cardsRes = await fetch('http://lastcard.sytes.net/cards/');
     // const cards = await cardsRes.json();
-
-    // const usersRes = await fetch('http://localhost:8000/users/');
+    //
+    // const usersRes = await fetch('http://lastcard.sytes.net/users/');
     // const users = await usersRes.json();
     // return { cards, users };
+
     return {
       cards: [
         {
