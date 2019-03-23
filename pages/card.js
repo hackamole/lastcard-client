@@ -25,7 +25,7 @@ export default class Card extends React.Component {
   static async getInitialProps({ query }) {
     console.log('DEBUG', query);
     console.log('DEBUG', Cookies.get('last-card-auth'));
-    
+
     // eslint-disable-next-line no-undef
     const cardRes = await fetch(`http://localhost:8000/cards/${query.id}`,
     {

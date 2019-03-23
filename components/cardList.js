@@ -25,7 +25,14 @@ const Card = styled.article`
   div {
     width: 100%;
     padding: 1rem;
+    span {
+      font-weight: 400;
+      font-size: 12px;
+    }
     h3 {
+      color: #6A38BB;
+      margin: 0;
+      padding: 4px 0 0;
       font-weight: 600;
     }
   }
@@ -63,7 +70,8 @@ export default class CardList extends React.Component {
       <Card>
         <header>{card.id}</header>
         <div>
-          <h3>{card.original_user}</h3>
+          <span>passed by: </span>
+          <h3>{card.previousUser.first_name} {card.current_user.last_name}</h3>
         </div>
       </Card>
     )
