@@ -2,14 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 const EditProfileWrapper = styled.section`
-  position: fixed;
+  //position: fixed;
+  z-index: 1;
   bottom: 0;
   height: 100%;
   width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  color: #797979;
+  color: white;
   
   div.edit-panel {
     position: fixed;
@@ -20,13 +23,14 @@ const EditProfileWrapper = styled.section`
     top: 40px;
     opacity: 0;
     border-radius: 50%;
+    padding-top: 10rem;
     transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     &.isExpanded {
       height: 100%;
       width: 100%;
       right: 0;
       top: 0;
-      background-color: #E8E8E8;
+      background: linear-gradient(60.15deg, #851299 0%, #7471FA 100%);
       opacity: 1;
       border-radius: 0;
     }
@@ -86,7 +90,7 @@ const EditProfileWrapper = styled.section`
           }
           input {
             flex: 1;
-            color: #797979;
+            color: #787878;
           }
         }
       }
@@ -111,7 +115,7 @@ const EditProfileWrapper = styled.section`
           display: flex;
           justify-content: center;
           align-items: center;
-          background: #797979;
+          background: #787878;
           color: white;
           font-size: .875rem;
           margin-bottom: 1rem;
@@ -120,9 +124,9 @@ const EditProfileWrapper = styled.section`
           }
         }
         button.secundary {
-          border: 1px solid #797979;
+          border: 1px solid #787878;
           background-color: #E8E8E8;
-          color: #797979;
+          color: #787878;
         }
       }
     }
@@ -145,29 +149,32 @@ const EditProfileWrapper = styled.section`
       }
       span {
         font-size: 1.5rem;
-        color: #787878;
+        color: white;
       }
     }
+  }
+  
+  button {
+    border: none;
+    background-color: transparent;
   }
   
   button.open {
     z-index: 1;
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     left: calc(100% - 4rem);
     margin: 0;
     padding: 0;
     outline: none;
     transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     &.isExpanded {
-      top: 4rem;
+      top: 10rem;
       left: 2rem;
-      
       img {
         width: 6rem;
       }
     }
-    
     img {
       width: 2rem;
       transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -186,8 +193,8 @@ export default class EditProfile extends React.Component {
   state = {
     hasChanges: false,
     isExpanded: false,
-    linkedin: this.props.user.links.linkedin || 'linkedin-url-here',
-    github: this.props.user.links.github || 'github-url-here',
+    linkedin: '',
+    github: '',
   }
 
   onChange = (e, name) => {
@@ -228,11 +235,11 @@ export default class EditProfile extends React.Component {
             <span className="icon-cross" />
           </button>
           <div className={isExpanded ? 'isExpanded' : ''}>
-            <h1 className="name">{user.name}</h1>
-            <h2 className="title">{user.title} @ {user.company}</h2>
+            <h1 className="name">{user && user.first_name} {user && user.last_name}</h1>
+            {/*<h2 className="title">{user && user.title} @ {user && user.company}</h2>*/}
             <p className="contacts">
-              <span>{user.contacts.email}</span>
-              <span>{user.contacts.phone}</span>
+              <span>{user && user.email}</span>
+              <span>{user && user.mobile}</span>
             </p>
             <section>
               <ul>
